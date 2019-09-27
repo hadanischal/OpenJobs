@@ -12,16 +12,12 @@ target 'OpenJobs' do
   pod 'SwiftLint'
   pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
-  
-def shared_pods
-  pod 'Quick', '~> 2.1.0'
-  pod 'Nimble', '~> 8'
-end
 
 target 'OpenJobsTests' do
   inherit! :search_paths
   # Pods for testing
-  shared_pods
+  pod 'Quick', '~> 2.1.0'
+  pod 'Nimble', '~> 8'
   pod 'Cuckoo', '~> 1.0.6'
   pod 'RxBlocking', '~> 5.0'
   pod 'RxTest',     '~> 5.0'
@@ -31,7 +27,6 @@ end
 target 'OpenJobsUITests' do
   inherit! :search_paths
   # Pods for testing
-  shared_pods
 end
 
 end

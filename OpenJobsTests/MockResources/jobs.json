@@ -1,0 +1,69 @@
+{
+  "jobs": [
+    {
+      "jobId": 423421,
+      "category": "Electricians",
+      "postedDate": "2017-04-13",
+      "status": "In Progress",
+      "connectedBusinesses": [
+        {
+          "businessId": 203213,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/a.png",
+          "isHired": false
+        },
+        {
+          "businessId": 205434,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/p.png",
+          "isHired": true
+        },
+        {
+          "businessId": 414324,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/i.png",
+          "isHired": false
+        },
+        {
+          "businessId": 324353,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/g.png",
+          "isHired": true
+        }
+      ],
+      "detailsLink": "/jobs/423421"
+    },
+    {
+      "jobId": 426484,
+      "category": "Carpet Cleaning",
+      "postedDate": "2017-03-20",
+      "status": "Closed",
+      "connectedBusinesses": [
+        {
+          "businessId": 381453,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/d.png",
+          "isHired": true
+        }
+      ],
+      "detailsLink": "/jobs/426484"
+    },
+    {
+      "jobId": 4265031,
+      "category": "Splashbacks",
+      "postedDate": "2017-05-03",
+      "status": "In progress",
+      "connectedBusinesses": [
+        {
+          "businessId": 381453,
+          "thumbnail": "https://assets.homeimprovementpages.com.au/images/hui/avatars/e.png",
+          "isHired": false
+        }
+      ],
+      "detailsLink": "/jobs/4265031"
+    },
+    {
+      "jobId": 564211,
+      "category": "Painting",
+      "postedDate": "2017-05-08",
+      "status": "In progress",
+      "connectedBusinesses": null,
+      "detailsLink": "/jobs/564211"
+    }
+  ]
+}
