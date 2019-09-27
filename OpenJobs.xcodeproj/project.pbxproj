@@ -15,6 +15,9 @@
 		0480BB07233E0D500070375B /* source-sans-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAEF233E0D500070375B /* source-sans-pro.regular.ttf */; };
 		0480BB08233E0D500070375B /* source-sans-pro.light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAF0233E0D500070375B /* source-sans-pro.light.ttf */; };
 		0480BB09233E0D500070375B /* source-sans-pro.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAF1233E0D500070375B /* source-sans-pro.bold.ttf */; };
+		0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */; };
+		0480BB38233E0F7D0070375B /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB24233E0F7C0070375B /* JobsList.swift */; };
+		0480BB39233E0F7D0070375B /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB25233E0F7C0070375B /* JobModel.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06592233CCFC6006F8B77 /* ViewController.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		0480BAEF233E0D500070375B /* source-sans-pro.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.regular.ttf"; sourceTree = "<group>"; };
 		0480BAF0233E0D500070375B /* source-sans-pro.light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.light.ttf"; sourceTree = "<group>"; };
 		0480BAF1233E0D500070375B /* source-sans-pro.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.bold.ttf"; sourceTree = "<group>"; };
+		0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusiness.swift; sourceTree = "<group>"; };
+		0480BB24233E0F7C0070375B /* JobsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
+		0480BB25233E0F7C0070375B /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F06592233CCFC6006F8B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +142,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0480BB22233E0F7C0070375B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0480BB24233E0F7C0070375B /* JobsList.swift */,
+				0480BB25233E0F7C0070375B /* JobModel.swift */,
+				0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04F06584233CCFC6006F8B77 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +178,7 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
+				0480BB22233E0F7C0070375B /* Models */,
 				0480BAED233E0D500070375B /* Resources */,
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
@@ -229,6 +246,7 @@
 				04F0658B233CCFC6006F8B77 /* Resources */,
 				B8E1142E30FF363344DFB82D /* [CP] Embed Pods Frameworks */,
 				0480BB18233E0D8F0070375B /* Swiftlint Script */,
+				0480BB45233E1BB90070375B /* Cuckoo Script */,
 			);
 			buildRules = (
 			);
@@ -267,6 +285,7 @@
 				04F065AB233CCFC7006F8B77 /* Sources */,
 				04F065AC233CCFC7006F8B77 /* Frameworks */,
 				04F065AD233CCFC7006F8B77 /* Resources */,
+				8699AD915CCA59F0AC4331C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,6 +390,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		0480BB45233E1BB90070375B /* Cuckoo Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
 		34A6E94460E0D79B87C996B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +469,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8699AD915CCA59F0AC4331C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenJobsUITests/Pods-OpenJobsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenJobsUITests/Pods-OpenJobsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenJobsUITests/Pods-OpenJobsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A186F844B3CD312DBA34DB0F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,8 +537,11 @@
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
 				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
 				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
+				0480BB38233E0F7D0070375B /* JobsList.swift in Sources */,
+				0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */,
 				04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
+				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
