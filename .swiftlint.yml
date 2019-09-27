@@ -1,7 +1,12 @@
 opt_in_rules:
 - empty_count
+- line_length
+
+line_length:
+- 300 # warning
+- 400 # error
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Pods
-- OpenJobsTests/
+- OpenJobsTests/GeneratedMocks.swift
 
