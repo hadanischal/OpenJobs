@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */; };
+		047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */; };
+		047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DC0233CDBEB004B4F17 /* WebService.swift */; };
+		047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DDD233CE569004B4F17 /* URL+Extensions.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06592233CCFC6006F8B77 /* ViewController.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		047D7DC0233CDBEB004B4F17 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		047D7DDD233CE569004B4F17 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F06592233CCFC6006F8B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047D7DBD233CDBEB004B4F17 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */,
+				047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */,
+				047D7DC0233CDBEB004B4F17 /* WebService.swift */,
+				047D7DDD233CE569004B4F17 /* URL+Extensions.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		04F06584233CCFC6006F8B77 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +135,7 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
+				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06592233CCFC6006F8B77 /* ViewController.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
@@ -155,7 +175,6 @@
 				2717E08F7310747FBDA44EF0 /* Pods-OpenJobsUITests.debug.xcconfig */,
 				AF48FCD59A55BC046A61B09A /* Pods-OpenJobsUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -408,7 +427,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */,
+				047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */,
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
+				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
+				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
 				04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
 			);
