@@ -25,6 +25,9 @@
 		04C97589233EC9FD005224EB /* GetJobsHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C97586233EC9FD005224EB /* GetJobsHandlerTests.swift */; };
 		04C9758A233EC9FD005224EB /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C97587233EC9FD005224EB /* GeneratedMocks.swift */; };
 		04C9758B233EC9FD005224EB /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C97588233EC9FD005224EB /* MockData.swift */; };
+		04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9758F233ECE4C005224EB /* JobsListViewModel.swift */; };
+		04C975B0233ECE5C005224EB /* JobsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */; };
+		04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975B1233ED46F005224EB /* SegmentModel.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06592233CCFC6006F8B77 /* ViewController.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		04C97586233EC9FD005224EB /* GetJobsHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJobsHandlerTests.swift; sourceTree = "<group>"; };
 		04C97587233EC9FD005224EB /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		04C97588233EC9FD005224EB /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		04C9758F233ECE4C005224EB /* JobsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModel.swift; sourceTree = "<group>"; };
+		04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModelTests.swift; sourceTree = "<group>"; };
+		04C975B1233ED46F005224EB /* SegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentModel.swift; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F06592233CCFC6006F8B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 				0480BB24233E0F7C0070375B /* JobsList.swift */,
 				0480BB25233E0F7C0070375B /* JobModel.swift */,
 				0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */,
+				04C975B1233ED46F005224EB /* SegmentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +190,14 @@
 				04C97582233EC9E8005224EB /* jobs.json */,
 			);
 			path = MockResources;
+			sourceTree = "<group>";
+		};
+		04C9758E233ECE4C005224EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04C9758F233ECE4C005224EB /* JobsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		04F06584233CCFC6006F8B77 = {
@@ -215,6 +230,7 @@
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
+				04C9758E233ECE4C005224EB /* ViewModel */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06592233CCFC6006F8B77 /* ViewController.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
@@ -232,6 +248,7 @@
 				04C97580233EC9E8005224EB /* MockResources */,
 				04C97587233EC9FD005224EB /* GeneratedMocks.swift */,
 				04C97586233EC9FD005224EB /* GetJobsHandlerTests.swift */,
+				04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */,
 				04F065A8233CCFC7006F8B77 /* OpenJobsTests.swift */,
 				04F065AA233CCFC7006F8B77 /* Info.plist */,
 			);
@@ -444,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\" \\\n\"${INPUT_DIR}/APIWrappers/GetJobsHandlerProtocol.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		04C9758C233ECC74005224EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -570,7 +587,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */,
 				047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */,
+				04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */,
 				047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */,
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
 				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
@@ -589,6 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C975B0233ECE5C005224EB /* JobsListViewModelTests.swift in Sources */,
 				04C97589233EC9FD005224EB /* GetJobsHandlerTests.swift in Sources */,
 				04C97583233EC9E8005224EB /* TestError.swift in Sources */,
 				04F065A9233CCFC7006F8B77 /* OpenJobsTests.swift in Sources */,
