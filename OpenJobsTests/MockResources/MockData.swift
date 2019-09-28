@@ -27,6 +27,14 @@ class MockData {
         }
     }
 
+    var jobsOpen: [JobModel] {
+        return filterJobList()[JobType.inProgress.rawValue.lowercased()] ?? []
+    }
+
+    var jobsClosed: [JobModel] {
+        return filterJobList()[JobType.closed.rawValue.lowercased()] ?? []
+    }
+
     func readJson(forResource fileName: String ) -> Data? {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
@@ -42,4 +50,16 @@ class MockData {
         }
     }
 
+    private func filterJobList() -> [String: [JobModel]] {
+
+        guard let jobList  = self.stubJobsList() else {
+            XCTAssert(false, "Can't get job list from jobs.json")
+            return ["": []]
+        }
+
+        let dictionary = Dictionary(grouping: jobList.jobs, by: { (element: JobModel) in
+            return element.status.lowercased()
+        })
+        return dictionary
+    }
 }
