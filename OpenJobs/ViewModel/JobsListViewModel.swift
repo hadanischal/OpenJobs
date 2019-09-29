@@ -15,6 +15,7 @@ protocol JobsListDataSource {
     func updateList(withSegmentModel segmentModel: SegmentModel)
     var jobsList: Observable<[JobModel]> { get }
     var title: Observable<String> { get }
+    func businessesStatus(_ connectedBusiness: [ConnectedBusiness]?) -> String
 }
 
 enum JobType: String {
@@ -30,6 +31,7 @@ class JobsListViewModel: JobsListDataSource {
     //input
     private let getJobsHandler: GetJobsHandlerProtocol!
 
+    private var jobsOpenAndClosed: [JobModel] = []
     private var jobsOpen: [JobModel] = []
     private var jobsClosed: [JobModel] = []
 
@@ -45,11 +47,20 @@ class JobsListViewModel: JobsListDataSource {
         return Observable.just("Select Job")
     }
 
+    func businessesStatus(_ connectedBusiness: [ConnectedBusiness]?) -> String {
+        if let businessList = connectedBusiness,
+            !businessList.isEmpty {
+            return "You have hired \(businessList.count) businesses"
+        }
+        return "connecting you with businesses"
+    }
+
     func getJobsList() {
         getJobsHandler
             .getJobs()
             .flatMap { [weak self] result -> Observable<[String: [JobModel]]> in
                 if let list = result?.jobs {
+                    self?.jobsOpenAndClosed = list
                     return self?.filterJobList(withJobList: list) ?? Observable.error(RxError.unknown)
                 }
                 return Observable.error(RxError.unknown)

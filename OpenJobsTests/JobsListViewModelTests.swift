@@ -5,6 +5,7 @@
 //  Created by Nischal Hada on 28/9/19.
 //  Copyright © 2019 Nischal Hada. All rights reserved.
 //
+// swiftlint:disable function_body_length
 
 import XCTest
 import Quick
@@ -40,6 +41,30 @@ class JobsListViewModelTests: QuickSpec {
                 let correctResult = [Recorded.next(200, "Select Job"),
                                      Recorded.completed(200)]
                 expect(res.events).to(equal(correctResult))
+            })
+
+            describe("sets businessesStatus correctly", {
+                context("When ConnectedBusiness is greater then zero", {
+                    var businessesStatus: String!
+                    beforeEach {
+                        let connectedBusinesses =  MockData().jobsOpen[0].connectedBusinesses
+                        businessesStatus =  testViewModel.businessesStatus(connectedBusinesses)
+                    }
+                    it("sets the businessesStatus correctly", closure: {
+                        expect(businessesStatus).to(equal("You have hired 4 businesses"))
+                    })
+                })
+
+                context("When ConnectedBusiness is zero", {
+                    var businessesStatus: String!
+                    beforeEach {
+                        let connectedBusinesses =  MockData().jobsOpen.last?.connectedBusinesses
+                        businessesStatus =  testViewModel.businessesStatus(connectedBusinesses)
+                    }
+                    it("sets the businessesStatus correctly", closure: {
+                        expect(businessesStatus).to(equal("connecting you with businesses"))
+                    })
+                })
             })
 
             describe("Get Jobs from server succeed", {

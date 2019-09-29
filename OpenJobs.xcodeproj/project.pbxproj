@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0443A44323402E61008E6C8B /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43723402E61008E6C8B /* JobsListViewController.swift */; };
+		0443A44423402E61008E6C8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43A23402E61008E6C8B /* CustomButton.swift */; };
+		0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */; };
+		0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */; };
 		047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */; };
 		047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */; };
 		047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DC0233CDBEB004B4F17 /* WebService.swift */; };
@@ -42,7 +46,6 @@
 		04C975B0233ECE5C005224EB /* JobsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */; };
 		04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975B1233ED46F005224EB /* SegmentModel.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
-		04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06592233CCFC6006F8B77 /* ViewController.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
 		04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F06597233CCFC6006F8B77 /* OpenJobs.xcdatamodeld */; };
 		04F0659B233CCFC7006F8B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F0659A233CCFC7006F8B77 /* Assets.xcassets */; };
@@ -72,6 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0443A43723402E61008E6C8B /* JobsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewController.swift; sourceTree = "<group>"; };
+		0443A43A23402E61008E6C8B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentioBuilder.swift; sourceTree = "<group>"; };
 		047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		047D7DC0233CDBEB004B4F17 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -108,7 +115,6 @@
 		04C975B1233ED46F005224EB /* SegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentModel.swift; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04F06592233CCFC6006F8B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04F06595233CCFC6006F8B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F06598233CCFC6006F8B77 /* OpenJobs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenJobs.xcdatamodel; sourceTree = "<group>"; };
 		04F0659A233CCFC7006F8B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +172,47 @@
 				04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */,
 			);
 			path = AlertControllerExtension;
+			sourceTree = "<group>";
+		};
+		0443A43623402E61008E6C8B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43723402E61008E6C8B /* JobsListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0443A43823402E61008E6C8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43923402E61008E6C8B /* CustomViews */,
+				0443A43B23402E61008E6C8B /* DashboardTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0443A43923402E61008E6C8B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43A23402E61008E6C8B /* CustomButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		0443A43B23402E61008E6C8B /* DashboardTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */,
+			);
+			path = DashboardTableViewCell;
+			sourceTree = "<group>";
+		};
+		0443A43D23402E61008E6C8B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		047D7DBD233CDBEB004B4F17 /* Networking */ = {
@@ -288,14 +335,16 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
-				0480BAED233E0D500070375B /* Resources */,
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
 				04C9758E233ECE4C005224EB /* ViewModel */,
+				0443A43623402E61008E6C8B /* ViewController */,
+				0443A43823402E61008E6C8B /* Views */,
+				0443A43D23402E61008E6C8B /* Utility */,
 				04BF0F7F233F1BAC00FF5D4F /* Extensions */,
+				0480BAED233E0D500070375B /* Resources */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
-				04F06592233CCFC6006F8B77 /* ViewController.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
 				04F0659A233CCFC7006F8B77 /* Assets.xcassets */,
 				04F0659C233CCFC7006F8B77 /* LaunchScreen.storyboard */,
@@ -650,6 +699,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0443A44323402E61008E6C8B /* JobsListViewController.swift in Sources */,
 				04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */,
 				04BF0FA7233F3BD400FF5D4F /* String+Extension .swift in Sources */,
 				047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */,
@@ -667,7 +717,7 @@
 				0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */,
 				04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */,
 				04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */,
-				04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */,
+				0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */,
 				04BF0FA5233F39E700FF5D4F /* DateFormatter+Formatters.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
 				04C9757E233EC9CF005224EB /* GetJobsHandlerProtocol.swift in Sources */,
@@ -676,6 +726,8 @@
 				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
 				04BF0F97233F1BAD00FF5D4F /* ColourConstant.swift in Sources */,
 				04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */,
+				0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */,
+				0443A44423402E61008E6C8B /* CustomButton.swift in Sources */,
 				04BF0F95233F1BAD00FF5D4F /* BundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

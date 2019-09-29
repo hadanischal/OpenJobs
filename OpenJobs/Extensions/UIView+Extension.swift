@@ -5,7 +5,7 @@
 //  Created by Nischal Hada on 28/9/19.
 //  Copyright © 2019 Nischal Hada. All rights reserved.
 //
-
+// swiftlint:disable all
 import UIKit
 
 //
