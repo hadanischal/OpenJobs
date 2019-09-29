@@ -18,6 +18,19 @@
 		0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */; };
 		0480BB38233E0F7D0070375B /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB24233E0F7C0070375B /* JobsList.swift */; };
 		0480BB39233E0F7D0070375B /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB25233E0F7C0070375B /* JobModel.swift */; };
+		04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */; };
+		04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */; };
+		04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */; };
+		04BF0F92233F1BAD00FF5D4F /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */; };
+		04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */; };
+		04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */; };
+		04BF0F95233F1BAD00FF5D4F /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F86233F1BAC00FF5D4F /* BundleExtension.swift */; };
+		04BF0F96233F1BAD00FF5D4F /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F87233F1BAC00FF5D4F /* ImageViewExtension.swift */; };
+		04BF0F97233F1BAD00FF5D4F /* ColourConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F88233F1BAC00FF5D4F /* ColourConstant.swift */; };
+		04BF0F98233F1BAD00FF5D4F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F89233F1BAC00FF5D4F /* UITableView+Extensions.swift */; };
+		04BF0FA3233F39C400FF5D4F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0FA2233F39C400FF5D4F /* Date+Extensions.swift */; };
+		04BF0FA5233F39E700FF5D4F /* DateFormatter+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0FA4233F39E700FF5D4F /* DateFormatter+Formatters.swift */; };
+		04BF0FA7233F3BD400FF5D4F /* String+Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0FA6233F3BD400FF5D4F /* String+Extension .swift */; };
 		04C9757E233EC9CF005224EB /* GetJobsHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9757C233EC9CF005224EB /* GetJobsHandlerProtocol.swift */; };
 		04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9757D233EC9CF005224EB /* GetJobsHandler.swift */; };
 		04C97583233EC9E8005224EB /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C97581233EC9E8005224EB /* TestError.swift */; };
@@ -70,6 +83,19 @@
 		0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusiness.swift; sourceTree = "<group>"; };
 		0480BB24233E0F7C0070375B /* JobsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
 		0480BB25233E0F7C0070375B /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
+		04BF0F86233F1BAC00FF5D4F /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		04BF0F87233F1BAC00FF5D4F /* ImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		04BF0F88233F1BAC00FF5D4F /* ColourConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourConstant.swift; sourceTree = "<group>"; };
+		04BF0F89233F1BAC00FF5D4F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		04BF0FA2233F39C400FF5D4F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		04BF0FA4233F39E700FF5D4F /* DateFormatter+Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Formatters.swift"; sourceTree = "<group>"; };
+		04BF0FA6233F3BD400FF5D4F /* String+Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension .swift"; sourceTree = "<group>"; };
 		04C9757C233EC9CF005224EB /* GetJobsHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJobsHandlerProtocol.swift; sourceTree = "<group>"; };
 		04C9757D233EC9CF005224EB /* GetJobsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJobsHandler.swift; sourceTree = "<group>"; };
 		04C97581233EC9E8005224EB /* TestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
@@ -133,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0443A42E23402C17008E6C8B /* AlertControllerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */,
+				04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */,
+			);
+			path = AlertControllerExtension;
+			sourceTree = "<group>";
+		};
 		047D7DBD233CDBEB004B4F17 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +206,33 @@
 				04C975B1233ED46F005224EB /* SegmentModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04BF0F7F233F1BAC00FF5D4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0FA1233F39B700FF5D4F /* DateExtensions */,
+				0443A42E23402C17008E6C8B /* AlertControllerExtension */,
+				04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */,
+				04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */,
+				04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */,
+				04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */,
+				04BF0F86233F1BAC00FF5D4F /* BundleExtension.swift */,
+				04BF0F87233F1BAC00FF5D4F /* ImageViewExtension.swift */,
+				04BF0F88233F1BAC00FF5D4F /* ColourConstant.swift */,
+				04BF0F89233F1BAC00FF5D4F /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04BF0FA1233F39B700FF5D4F /* DateExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0FA2233F39C400FF5D4F /* Date+Extensions.swift */,
+				04BF0FA4233F39E700FF5D4F /* DateFormatter+Formatters.swift */,
+				04BF0FA6233F3BD400FF5D4F /* String+Extension .swift */,
+			);
+			path = DateExtensions;
 			sourceTree = "<group>";
 		};
 		04C9757B233EC9CF005224EB /* APIWrappers */ = {
@@ -231,6 +293,7 @@
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
 				04C9758E233ECE4C005224EB /* ViewModel */,
+				04BF0F7F233F1BAC00FF5D4F /* Extensions */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06592233CCFC6006F8B77 /* ViewController.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
@@ -588,19 +651,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */,
+				04BF0FA7233F3BD400FF5D4F /* String+Extension .swift in Sources */,
 				047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */,
+				04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */,
 				04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */,
 				047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */,
+				04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */,
+				04BF0F92233F1BAD00FF5D4F /* FontExtension.swift in Sources */,
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
 				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
+				04BF0F96233F1BAD00FF5D4F /* ImageViewExtension.swift in Sources */,
 				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
+				04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */,
 				0480BB38233E0F7D0070375B /* JobsList.swift in Sources */,
 				0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */,
+				04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */,
+				04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */,
 				04F06593233CCFC6006F8B77 /* ViewController.swift in Sources */,
+				04BF0FA5233F39E700FF5D4F /* DateFormatter+Formatters.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
 				04C9757E233EC9CF005224EB /* GetJobsHandlerProtocol.swift in Sources */,
+				04BF0F98233F1BAD00FF5D4F /* UITableView+Extensions.swift in Sources */,
+				04BF0FA3233F39C400FF5D4F /* Date+Extensions.swift in Sources */,
 				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
+				04BF0F97233F1BAD00FF5D4F /* ColourConstant.swift in Sources */,
 				04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */,
+				04BF0F95233F1BAD00FF5D4F /* BundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
