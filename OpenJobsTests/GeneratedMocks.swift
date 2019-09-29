@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-09-28 13:09:09 +0000
+// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-09-29 23:30:19 +0000
 
 //
 //  GetJobsHandlerProtocol.swift
@@ -104,7 +104,143 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-09-28 13:09:09 +0000
+// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-09-29 23:30:19 +0000
+
+//
+//  CoreDataManagerDataSource.swift
+//  OpenJobs
+//
+//  Created by Nischal Hada on 29/9/19.
+//  Copyright © 2019 Nischal Hada. All rights reserved.
+//
+
+import Cuckoo
+@testable import OpenJobs
+
+import RxSwift
+
+
+ class MockCoreDataManagerDataSource: CoreDataManagerDataSource, Cuckoo.ProtocolMock {
+    
+     typealias MocksType = CoreDataManagerDataSource
+    
+     typealias Stubbing = __StubbingProxy_CoreDataManagerDataSource
+     typealias Verification = __VerificationProxy_CoreDataManagerDataSource
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    
+    private var __defaultImplStub: CoreDataManagerDataSource?
+
+     func enableDefaultImplementation(_ stub: CoreDataManagerDataSource) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+
+    
+
+    
+    
+    
+     func saveInCoreDataWith(withJobList jobList: [JobModel]) -> Completable {
+        
+    return cuckoo_manager.call("saveInCoreDataWith(withJobList: [JobModel]) -> Completable",
+            parameters: (jobList),
+            escapingParameters: (jobList),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.saveInCoreDataWith(withJobList: jobList))
+        
+    }
+    
+    
+    
+     func fetchJobList() -> Single<[JobModel]> {
+        
+    return cuckoo_manager.call("fetchJobList() -> Single<[JobModel]>",
+            parameters: (),
+            escapingParameters: (),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.fetchJobList())
+        
+    }
+    
+
+	 struct __StubbingProxy_CoreDataManagerDataSource: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	     init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func saveInCoreDataWith<M1: Cuckoo.Matchable>(withJobList jobList: M1) -> Cuckoo.ProtocolStubFunction<([JobModel]), Completable> where M1.MatchedType == [JobModel] {
+	        let matchers: [Cuckoo.ParameterMatcher<([JobModel])>] = [wrap(matchable: jobList) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockCoreDataManagerDataSource.self, method: "saveInCoreDataWith(withJobList: [JobModel]) -> Completable", parameterMatchers: matchers))
+	    }
+	    
+	    func fetchJobList() -> Cuckoo.ProtocolStubFunction<(), Single<[JobModel]>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockCoreDataManagerDataSource.self, method: "fetchJobList() -> Single<[JobModel]>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	 struct __VerificationProxy_CoreDataManagerDataSource: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func saveInCoreDataWith<M1: Cuckoo.Matchable>(withJobList jobList: M1) -> Cuckoo.__DoNotUse<([JobModel]), Completable> where M1.MatchedType == [JobModel] {
+	        let matchers: [Cuckoo.ParameterMatcher<([JobModel])>] = [wrap(matchable: jobList) { $0 }]
+	        return cuckoo_manager.verify("saveInCoreDataWith(withJobList: [JobModel]) -> Completable", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	    @discardableResult
+	    func fetchJobList() -> Cuckoo.__DoNotUse<(), Single<[JobModel]>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("fetchJobList() -> Single<[JobModel]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+}
+
+ class CoreDataManagerDataSourceStub: CoreDataManagerDataSource {
+    
+
+    
+
+    
+     func saveInCoreDataWith(withJobList jobList: [JobModel]) -> Completable  {
+        return DefaultValueRegistry.defaultValue(for: (Completable).self)
+    }
+    
+     func fetchJobList() -> Single<[JobModel]>  {
+        return DefaultValueRegistry.defaultValue(for: (Single<[JobModel]>).self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-09-29 23:30:19 +0000
 
 //
 //  WebServiceProtocol.swift
