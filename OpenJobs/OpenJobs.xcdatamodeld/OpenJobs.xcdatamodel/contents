@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ConnectedBusinesses" representedClassName="ConnectedBusinesses" syncable="YES" codeGenerationType="class">
+        <attribute name="businessId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isHired" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="jobs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jobs" inverseName="connectedBusinesses" inverseEntity="Jobs" syncable="YES"/>
+    </entity>
+    <entity name="Jobs" representedClassName="Jobs" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailsLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postedDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="connectedBusinesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConnectedBusinesses" inverseName="jobs" inverseEntity="ConnectedBusinesses" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ConnectedBusinesses" positionX="-54" positionY="27" width="128" height="105"/>
+        <element name="Jobs" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
 </model>

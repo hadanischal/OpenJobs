@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import CoreData
 
 // MARK: - Job
 struct JobModel: Codable {
     let jobID: Int64
     let category, postedDate, status: String
-    let connectedBusinesses: [ConnectedBusiness]?
+    let connectedBusinesses: [ConnectedBusinessModel]?
     let detailsLink: String
 
     enum CodingKeys: String, CodingKey {
@@ -28,5 +29,19 @@ extension JobModel: Equatable {
         && lhs.category == rhs.category
         && lhs.postedDate == rhs.postedDate
         && lhs.detailsLink == rhs.detailsLink
+    }
+}
+
+extension JobModel {
+    init(withJobs jobs: Jobs) {
+        self.jobID = jobs.jobId
+        self.category = jobs.category ?? ""
+        self.postedDate = jobs.postedDate ?? ""
+        self.status = jobs.status ?? ""
+        self.detailsLink = jobs.detailsLink ?? ""
+        let connectedBusiness = jobs.connectedBusinesses?.allObjects as? [ConnectedBusinesses]
+        self.connectedBusinesses = connectedBusiness?.map {
+            ConnectedBusinessModel(withConnectedBusiness: $0)
+        }
     }
 }
