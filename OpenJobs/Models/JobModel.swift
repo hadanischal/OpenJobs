@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Job
 struct JobModel: Codable {
-    let jobID: Int
+    let jobID: Int64
     let category, postedDate, status: String
     let connectedBusinesses: [ConnectedBusiness]?
     let detailsLink: String
