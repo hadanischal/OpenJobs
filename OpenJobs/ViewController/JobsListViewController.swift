@@ -62,12 +62,14 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
             .subscribe(onNext: { [weak self] list in
                 self?.jobList = list
                 self?.tableView.reloadData()
-                let indexPath = IndexPath(row: 0, section: 0)
-                self?.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                if !list.isEmpty {
+                    self?.tableView.scrollToTopRow()
+                }
                 }, onError: { error in
                     self.showAlertView(withTitle: "error", andMessage: error.localizedDescription)
             })
             .disposed(by: disposeBag)
+        viewModel.getJobsFromLocalDb()
         viewModel.getJobsList()
     }
     // MARK: - Table view data source
@@ -81,9 +83,7 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardTableViewCell", for: indexPath) as? DashboardTableViewCell else {
-            fatalError("DashboardTableViewCell does not exist")
-        }
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as DashboardTableViewCell
         let data = self.jobList[indexPath.row]
         cell.newsInfo = self.jobList[indexPath.row]
         cell.descriptionLabel.text = viewModel.businessesStatus(data.connectedBusinesses)

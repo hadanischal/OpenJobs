@@ -234,13 +234,6 @@
 			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
-		0443A4562340376B008E6C8B /* CoreDataModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CoreDataModels;
-			sourceTree = "<group>";
-		};
 		0443A457234037AC008E6C8B /* SegmentioBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,7 +362,6 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
-				0443A4562340376B008E6C8B /* CoreDataModels */,
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
