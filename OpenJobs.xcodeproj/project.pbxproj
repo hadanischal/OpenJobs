@@ -11,6 +11,10 @@
 		0443A44423402E61008E6C8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43A23402E61008E6C8B /* CustomButton.swift */; };
 		0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */; };
 		0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */; };
+		0443A44E23403734008E6C8B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A44923403734008E6C8B /* CoreDataManager.swift */; };
+		0443A44F23403734008E6C8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A44A23403734008E6C8B /* CoreDataStack.swift */; };
+		0443A45923403903008E6C8B /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A45823403903008E6C8B /* ReusableView.swift */; };
+		0443A45F2340ECD1008E6C8B /* CoreDataManagerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A45E2340ECD1008E6C8B /* CoreDataManagerDataSource.swift */; };
 		047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */; };
 		047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */; };
 		047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D7DC0233CDBEB004B4F17 /* WebService.swift */; };
@@ -19,7 +23,7 @@
 		0480BB07233E0D500070375B /* source-sans-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAEF233E0D500070375B /* source-sans-pro.regular.ttf */; };
 		0480BB08233E0D500070375B /* source-sans-pro.light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAF0233E0D500070375B /* source-sans-pro.light.ttf */; };
 		0480BB09233E0D500070375B /* source-sans-pro.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0480BAF1233E0D500070375B /* source-sans-pro.bold.ttf */; };
-		0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */; };
+		0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */; };
 		0480BB38233E0F7D0070375B /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB24233E0F7C0070375B /* JobsList.swift */; };
 		0480BB39233E0F7D0070375B /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB25233E0F7C0070375B /* JobModel.swift */; };
 		04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */; };
@@ -79,6 +83,10 @@
 		0443A43A23402E61008E6C8B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentioBuilder.swift; sourceTree = "<group>"; };
+		0443A44923403734008E6C8B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0443A44A23403734008E6C8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		0443A45823403903008E6C8B /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		0443A45E2340ECD1008E6C8B /* CoreDataManagerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerDataSource.swift; sourceTree = "<group>"; };
 		047D7DBE233CDBEB004B4F17 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		047D7DC0233CDBEB004B4F17 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
@@ -87,7 +95,7 @@
 		0480BAEF233E0D500070375B /* source-sans-pro.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.regular.ttf"; sourceTree = "<group>"; };
 		0480BAF0233E0D500070375B /* source-sans-pro.light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.light.ttf"; sourceTree = "<group>"; };
 		0480BAF1233E0D500070375B /* source-sans-pro.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "source-sans-pro.bold.ttf"; sourceTree = "<group>"; };
-		0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusiness.swift; sourceTree = "<group>"; };
+		0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusinessModel.swift; sourceTree = "<group>"; };
 		0480BB24233E0F7C0070375B /* JobsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
 		0480BB25233E0F7C0070375B /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				0443A43A23402E61008E6C8B /* CustomButton.swift */,
+				0443A45823403903008E6C8B /* ReusableView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -210,9 +219,34 @@
 		0443A43D23402E61008E6C8B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */,
+				0443A457234037AC008E6C8B /* SegmentioBuilder */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		0443A44823403734008E6C8B /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				0443A45E2340ECD1008E6C8B /* CoreDataManagerDataSource.swift */,
+				0443A44923403734008E6C8B /* CoreDataManager.swift */,
+				0443A44A23403734008E6C8B /* CoreDataStack.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		0443A4562340376B008E6C8B /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		0443A457234037AC008E6C8B /* SegmentioBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				0443A43E23402E61008E6C8B /* SegmentioBuilder.swift */,
+			);
+			path = SegmentioBuilder;
 			sourceTree = "<group>";
 		};
 		047D7DBD233CDBEB004B4F17 /* Networking */ = {
@@ -249,7 +283,7 @@
 			children = (
 				0480BB24233E0F7C0070375B /* JobsList.swift */,
 				0480BB25233E0F7C0070375B /* JobModel.swift */,
-				0480BB23233E0F7C0070375B /* ConnectedBusiness.swift */,
+				0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */,
 				04C975B1233ED46F005224EB /* SegmentModel.swift */,
 			);
 			path = Models;
@@ -335,6 +369,7 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
+				0443A4562340376B008E6C8B /* CoreDataModels */,
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
@@ -344,6 +379,7 @@
 				0443A43D23402E61008E6C8B /* Utility */,
 				04BF0F7F233F1BAC00FF5D4F /* Extensions */,
 				0480BAED233E0D500070375B /* Resources */,
+				0443A44823403734008E6C8B /* CoreDataManager */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
 				04F0659A233CCFC7006F8B77 /* Assets.xcassets */,
@@ -573,7 +609,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\" \\\n\"${INPUT_DIR}/APIWrappers/GetJobsHandlerProtocol.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\" \\\n\"${INPUT_DIR}/APIWrappers/GetJobsHandlerProtocol.swift\" \\\n\"${INPUT_DIR}/CoreDataManager/CoreDataManagerDataSource.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		04C9758C233ECC74005224EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -706,21 +742,25 @@
 				04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */,
 				04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */,
 				047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */,
+				0443A44F23403734008E6C8B /* CoreDataStack.swift in Sources */,
 				04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */,
 				04BF0F92233F1BAD00FF5D4F /* FontExtension.swift in Sources */,
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
+				0443A45F2340ECD1008E6C8B /* CoreDataManagerDataSource.swift in Sources */,
 				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
+				0443A44E23403734008E6C8B /* CoreDataManager.swift in Sources */,
 				04BF0F96233F1BAD00FF5D4F /* ImageViewExtension.swift in Sources */,
 				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
 				04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */,
 				0480BB38233E0F7D0070375B /* JobsList.swift in Sources */,
-				0480BB37233E0F7D0070375B /* ConnectedBusiness.swift in Sources */,
+				0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */,
 				04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */,
 				04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */,
 				0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */,
 				04BF0FA5233F39E700FF5D4F /* DateFormatter+Formatters.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
 				04C9757E233EC9CF005224EB /* GetJobsHandlerProtocol.swift in Sources */,
+				0443A45923403903008E6C8B /* ReusableView.swift in Sources */,
 				04BF0F98233F1BAD00FF5D4F /* UITableView+Extensions.swift in Sources */,
 				04BF0FA3233F39C400FF5D4F /* Date+Extensions.swift in Sources */,
 				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
