@@ -4,6 +4,7 @@ PODS:
     - CocoaLumberjack/Core
   - Cuckoo (1.0.6)
   - Kingfisher (5.7.1)
+  - NewPopMenu (2.1.2)
   - Nimble (8.0.2)
   - Quick (2.1.0)
   - RxBlocking (5.0.0):
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - Cuckoo (~> 1.0.6)
   - Kingfisher (~> 5.0)
+  - NewPopMenu
   - Nimble (~> 8)
   - Quick (~> 2.1.0)
   - RxBlocking (~> 5.0)
@@ -37,6 +39,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - Cuckoo
     - Kingfisher
+    - NewPopMenu
     - Nimble
     - Quick
     - RxBlocking
@@ -51,6 +54,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   Cuckoo: 8074fc309159c4862665b83798f5ad03e061e8bd
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 4ab7d5bfc0fc7ac92db141d09e54c2d4d379eeac
+PODFILE CHECKSUM: 02d9ad4b6f18ed5603caebb3d69feb07f5a1232b
 
 COCOAPODS: 1.7.5

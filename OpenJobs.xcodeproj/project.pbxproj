@@ -49,6 +49,7 @@
 		04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9758F233ECE4C005224EB /* JobsListViewModel.swift */; };
 		04C975B0233ECE5C005224EB /* JobsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */; };
 		04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975B1233ED46F005224EB /* SegmentModel.swift */; };
+		04DEE2092342169E007ACBFF /* PopMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEE2082342169E007ACBFF /* PopMenuBuilder.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
 		04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F06597233CCFC6006F8B77 /* OpenJobs.xcdatamodeld */; };
@@ -121,6 +122,7 @@
 		04C9758F233ECE4C005224EB /* JobsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModel.swift; sourceTree = "<group>"; };
 		04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModelTests.swift; sourceTree = "<group>"; };
 		04C975B1233ED46F005224EB /* SegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentModel.swift; sourceTree = "<group>"; };
+		04DEE2082342169E007ACBFF /* PopMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMenuBuilder.swift; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F06595233CCFC6006F8B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		0443A43D23402E61008E6C8B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				04DEE20723421691007ACBFF /* PopMenuBuilder */,
 				0443A457234037AC008E6C8B /* SegmentioBuilder */,
 			);
 			path = Utility;
@@ -334,6 +337,14 @@
 				04C9758F233ECE4C005224EB /* JobsListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04DEE20723421691007ACBFF /* PopMenuBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				04DEE2082342169E007ACBFF /* PopMenuBuilder.swift */,
+			);
+			path = PopMenuBuilder;
 			sourceTree = "<group>";
 		};
 		04F06584233CCFC6006F8B77 = {
@@ -757,6 +768,7 @@
 				04BF0FA3233F39C400FF5D4F /* Date+Extensions.swift in Sources */,
 				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
 				04BF0F97233F1BAD00FF5D4F /* ColourConstant.swift in Sources */,
+				04DEE2092342169E007ACBFF /* PopMenuBuilder.swift in Sources */,
 				04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */,
 				0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */,
 				0443A44423402E61008E6C8B /* CustomButton.swift in Sources */,
