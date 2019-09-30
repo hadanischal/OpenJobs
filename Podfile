@@ -12,6 +12,7 @@ target 'OpenJobs' do
   pod 'SwiftLint'
   pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
+  pod 'NewPopMenu'
 
 target 'OpenJobsTests' do
   inherit! :search_paths

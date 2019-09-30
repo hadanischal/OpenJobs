@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Segmentio
 import CocoaLumberjack
+import PopMenu
 
 class JobsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -87,10 +88,22 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
         let data = self.jobList[indexPath.row]
         cell.newsInfo = self.jobList[indexPath.row]
         cell.descriptionLabel.text = viewModel.businessesStatus(data.connectedBusinesses)
+        cell.moreButton.rx.tap.subscribe(onNext: { _ in
+            self.presentPopMenuView(withSourceView: cell.moreButton)
+        }).disposed(by: disposeBag)
         cell.selectionStyle = .none
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+
+    func presentPopMenuView(withSourceView sourceView: AnyObject) {
+        let popMenuBuilder = PopMenuBuilder()
+        let popMenuViewController = popMenuBuilder.buildPopMenuClose(sourceView)
+        popMenuViewController.didDismiss = { selected in
+            DDLogInfo("Menu dismissed: \(selected ? "selected item" : "no selection")")
+        }
+        present(popMenuViewController, animated: true, completion: nil)
     }
 }
