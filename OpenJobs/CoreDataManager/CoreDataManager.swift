@@ -37,7 +37,6 @@ final class CoreDataManager: CoreDataManagerDataSource {
 
             } catch let error {
                 DDLogError("ERROR saveCoreData : \(error)")
-                print(error)
                 completable(.error(RxError.noElements))
                 return Disposables.create {}
             }

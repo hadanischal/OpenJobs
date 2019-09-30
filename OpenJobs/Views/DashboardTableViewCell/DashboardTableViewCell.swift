@@ -10,6 +10,7 @@ import UIKit
 
 class DashboardTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var contentBagroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postedDateLabel: UILabel!
@@ -20,7 +21,6 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
 
-    @IBOutlet weak var thumbnailImage: UIImageView!
     @IBOutlet weak var viewDetailsButton: UIButton!
 
     var newsInfo: JobModel? {
@@ -32,34 +32,46 @@ class DashboardTableViewCell: UITableViewCell {
             let postedDate = data.postedDate.yyyyMMddDate?.ddMMyyyyString ?? data.postedDate
             postedDateLabel.text =  "Posted: \(postedDate)"
             descriptionLabel.text = data.status
-
-            if let array = data.connectedBusinesses,
-                !array.isEmpty,
-                let urlString = array[0].thumbnail,
-                let url = URL(string: urlString) {
-                thumbnailImage.setImage(url: url)
-            }
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.contentView.backgroundColor = .tableViewBackgroundColor
-        self.contentBagroundView.backgroundColor = .white
-        self.contentBagroundView.borderWidth = 1
-        self.contentBagroundView.borderColor = .cellBorderColor
-        self.thumbnailImage?.contentMode =   UIView.ContentMode.scaleAspectFit
+        contentView.backgroundColor = .tableViewBackgroundColor
+        contentBagroundView.backgroundColor = .white
+        contentBagroundView.borderWidth = 1
+        contentBagroundView.borderColor = .cellBorderColor
 
-        self.titleLabel.font = .heading2
-        self.postedDateLabel.font = .heading2
-        self.statusLabel.font = .detailBody
-        self.descriptionLabel.font = .heading2
+        titleLabel.font = .heading2
+        postedDateLabel.font = .heading2
+        statusLabel.font = .detailBody
+        descriptionLabel.font = .heading2
 
         titleLabel.textColor = .titleColor
         postedDateLabel.textColor = .descriptionColor
         statusLabel.textColor = .statusColor
         descriptionLabel.textColor = .descriptionColor
+
+        collectionView.register(BusinessCollectionViewCell.self)
+        collectionView.isScrollEnabled = false
     }
 
+}
+
+extension DashboardTableViewCell {
+
+    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
+
+        collectionView.delegate = dataSourceDelegate
+        collectionView.dataSource = dataSourceDelegate
+        collectionView.tag = row
+        collectionView.setContentOffset(collectionView.contentOffset, animated: false)
+        collectionView.reloadData()
+    }
+
+    var collectionViewContentOffsett: CGFloat {
+        set { collectionView.contentOffset.x = newValue }
+        get { return collectionView.contentOffset.x }
+    }
 }

@@ -21,6 +21,7 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
     private let disposeBag = DisposeBag()
     private var jobList = [JobModel]()
     var viewModel: JobsListDataSource = JobsListViewModel()
+    var storedOffsets = [Int: CGFloat]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +92,9 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.moreButton.rx.tap.subscribe(onNext: { _ in
             self.presentPopMenuView(withSourceView: cell.moreButton)
         }).disposed(by: disposeBag)
+        cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
+        cell.collectionViewContentOffsett = storedOffsets[indexPath.row] ?? 0
+
         cell.selectionStyle = .none
         return cell
     }
@@ -105,5 +109,27 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
             DDLogInfo("Menu dismissed: \(selected ? "selected item" : "no selection")")
         }
         present(popMenuViewController, animated: true, completion: nil)
+    }
+}
+
+extension JobsListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 75, height: 75)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return jobList[collectionView.tag].connectedBusinesses?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: BusinessCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        let data = jobList[collectionView.tag].connectedBusinesses?[indexPath.item]
+        cell.businessValue = data
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        DDLogInfo("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
     }
 }
