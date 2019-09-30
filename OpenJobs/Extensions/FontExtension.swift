@@ -54,4 +54,7 @@ extension UIFont {
     static var textButton: UIFont {
         return .boldFont(size: 25)
     }
+    static var statusTitle: UIFont {
+        return .boldFont(size: 16)
+    }
 }
