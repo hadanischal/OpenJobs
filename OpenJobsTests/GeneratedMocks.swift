@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-09-30 14:33:33 +0000
+// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-09-30 14:38:06 +0000
 
 //
 //  GetJobsHandlerProtocol.swift
@@ -104,7 +104,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-09-30 14:33:33 +0000
+// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-09-30 14:38:06 +0000
 
 //
 //  CoreDataManagerDataSource.swift
@@ -240,7 +240,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-09-30 14:33:33 +0000
+// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-09-30 14:38:06 +0000
 
 //
 //  WebServiceProtocol.swift
