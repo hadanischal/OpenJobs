@@ -18,7 +18,7 @@ final class CoreDataManager: CoreDataManagerDataSource {
     }
 
     //Returns the current Persistent Container for CoreData
-    var managedContext: NSManagedObjectContext {
+    private var managedContext: NSManagedObjectContext {
         return CoreDataStack.sharedInstance.persistentContainer.viewContext
     }
 
@@ -27,7 +27,7 @@ final class CoreDataManager: CoreDataManagerDataSource {
         .andThen(saveCoreData(jobList))
     }
 
-    func saveCoreData(_ jobList: [JobModel]) -> Completable {
+    private func saveCoreData(_ jobList: [JobModel]) -> Completable {
         return Completable.create { completable in
             _ = jobList.map {self.createJobEntityFrom(jobInfo: $0)}
             do {

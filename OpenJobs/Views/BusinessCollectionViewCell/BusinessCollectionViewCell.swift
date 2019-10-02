@@ -33,7 +33,7 @@ class BusinessCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         self.contentView.backgroundColor = .tableViewBackgroundColor
         self.backgroundContentView.backgroundColor = .white
-        self.profileImageView.contentMode =   UIView.ContentMode.scaleAspectFit
+        self.profileImageView.contentMode = UIView.ContentMode.scaleAspectFit
 
         statusLabel.backgroundColor = .primary
         statusLabel.font = .statusTitle
