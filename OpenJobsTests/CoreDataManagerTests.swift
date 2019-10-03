@@ -21,14 +21,15 @@ class CoreDataManagerTests: QuickSpec {
     override func spec() {
         var testHandler: CoreDataManager!
         var testScheduler: TestScheduler!
-        
-        describe("GetJobsHandler") {
+
+        describe("CoreDataManager") {
+            
             beforeEach {
                 testScheduler = TestScheduler(initialClock: 0)
                 testHandler = CoreDataManager()
             }
             
-            describe("when get Jobs List server request succeed ", {
+            describe("when save Jobs List to local DB succeed ", {
                 var result: MaterializedSequenceResult<Never>?
                 beforeEach {
                     result = testHandler.saveInCoreDataWith(withJobList: MockData().jobsOpen).toBlocking().materialize()
@@ -36,19 +37,9 @@ class CoreDataManagerTests: QuickSpec {
                 it("it completed successfully", closure: {
                     result?.assertSequenceCompletes()
                 })
-                it("emits the news list to the UI", closure: {
-                    let observable = testHandler.fetchJobList().asObservable()
-                    let res = testScheduler.start { observable }
-                    expect(res.events.count).to(equal(2))
-                    
-                    let value: [JobModel] = MockData().jobsOpen.reversed()
-                    let correctResult = [Recorded.next(200, value),
-                                         Recorded.completed(200)]
-                    expect(res.events).to(equal(correctResult))
-                })
             })
             
-            describe("when get Jobs List server request failed ", {
+            describe("when get jobs Closed Jobs List from local DB succeed ", {
                 var result: MaterializedSequenceResult<Never>?
                 
                 beforeEach {
@@ -57,7 +48,7 @@ class CoreDataManagerTests: QuickSpec {
                 it("it completed successfully", closure: {
                     result?.assertSequenceCompletes()
                 })
-                it("emits the news list to the UI", closure: {
+                it("return the news list from DB", closure: {
                     let observable = testHandler.fetchJobList().asObservable()
                     
                     let res = testScheduler.start { observable }

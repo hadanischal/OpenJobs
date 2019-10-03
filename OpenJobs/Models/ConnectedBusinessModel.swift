@@ -20,6 +20,14 @@ struct ConnectedBusinessModel: Codable {
     }
 }
 
+extension ConnectedBusinessModel: Equatable {
+    static func == (lhs: ConnectedBusinessModel, rhs: ConnectedBusinessModel) -> Bool {
+        return lhs.businessID == rhs.businessID
+            && lhs.thumbnail == rhs.thumbnail
+            && lhs.isHired == rhs.isHired
+    }
+}
+
 extension ConnectedBusinessModel {
     init(withConnectedBusiness businesses: ConnectedBusinesses) {
         self.businessID = businesses.businessId

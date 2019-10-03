@@ -29,6 +29,7 @@ extension JobModel: Equatable {
         && lhs.category == rhs.category
         && lhs.postedDate == rhs.postedDate
         && lhs.detailsLink == rhs.detailsLink
+        && lhs.connectedBusinesses == rhs.connectedBusinesses
     }
 }
 

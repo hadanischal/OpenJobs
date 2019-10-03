@@ -31,6 +31,7 @@ class DashboardTableViewCell: UITableViewCell {
             titleLabel.text = data.category
             let postedDate = data.postedDate.yyyyMMddDate?.ddMMyyyyString ?? data.postedDate
             postedDateLabel.text =  "Posted: \(postedDate)"
+            statusLabel.text = data.status.capitalized
             descriptionLabel.text = data.status
         }
     }
