@@ -14,12 +14,16 @@ import RxSwift
 final class CoreDataManager: CoreDataManagerDataSource {
     private let disposeBag = DisposeBag()
 
-    init() {
-    }
-
     //Returns the current Persistent Container for CoreData
-    private var managedContext: NSManagedObjectContext {
+    private lazy var managedContext: NSManagedObjectContext = {
         return CoreDataStack.sharedInstance.persistentContainer.viewContext
+    }()
+
+    private lazy var coreDataStack: CoreDataStack = {
+        return CoreDataStack.sharedInstance
+    }()
+
+    init() {
     }
 
     func saveInCoreDataWith(withJobList jobList: [JobModel]) -> Completable {
@@ -31,7 +35,7 @@ final class CoreDataManager: CoreDataManagerDataSource {
         return Completable.create { completable in
             _ = jobList.map {self.createJobEntityFrom(jobInfo: $0)}
             do {
-                try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+                try self.managedContext.save()
                 completable(.completed)
                 return Disposables.create {}
 
@@ -76,7 +80,7 @@ final class CoreDataManager: CoreDataManagerDataSource {
         return nil
     }
 
-    private func clearData() -> Completable {
+     func clearData() -> Completable {
         return Completable.create { completable in
             do {
                 let context = self.managedContext
@@ -84,7 +88,7 @@ final class CoreDataManager: CoreDataManagerDataSource {
                 do {
                     let objects  = try context.fetch(fetchRequest) as? [NSManagedObject]
                     _ = objects.map {$0.map {context.delete($0)}}
-                    CoreDataStack.sharedInstance.saveContext()
+                   self.coreDataStack.saveContext()
                     completable(.completed)
                     return Disposables.create {}
 
