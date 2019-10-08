@@ -15,6 +15,7 @@
 		0443A44F23403734008E6C8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A44A23403734008E6C8B /* CoreDataStack.swift */; };
 		0443A45923403903008E6C8B /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A45823403903008E6C8B /* ReusableView.swift */; };
 		0443A45F2340ECD1008E6C8B /* CoreDataManagerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A45E2340ECD1008E6C8B /* CoreDataManagerDataSource.swift */; };
+		0448C97223496EF10082369E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C97123496EF10082369E /* NetworkError.swift */; };
 		045AD8932342483C00614452 /* CollectionViewCenteredFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AD8922342483C00614452 /* CollectionViewCenteredFlowLayout.swift */; };
 		045AD8962342485500614452 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AD8952342485500614452 /* UICollectionView+Extension.swift */; };
 		045AD89B2342487000614452 /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AD8992342487000614452 /* BusinessCollectionViewCell.swift */; };
@@ -94,6 +95,7 @@
 		0443A44A23403734008E6C8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		0443A45823403903008E6C8B /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		0443A45E2340ECD1008E6C8B /* CoreDataManagerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerDataSource.swift; sourceTree = "<group>"; };
+		0448C97123496EF10082369E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		045AD8922342483C00614452 /* CollectionViewCenteredFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCenteredFlowLayout.swift; sourceTree = "<group>"; };
 		045AD8952342485500614452 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		045AD8992342487000614452 /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				047D7DBF233CDBEB004B4F17 /* WebServiceProtocol.swift */,
 				047D7DC0233CDBEB004B4F17 /* WebService.swift */,
 				047D7DDD233CE569004B4F17 /* URL+Extensions.swift */,
+				0448C97123496EF10082369E /* NetworkError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */,
 				045AD8962342485500614452 /* UICollectionView+Extension.swift in Sources */,
 				0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */,
+				0448C97223496EF10082369E /* NetworkError.swift in Sources */,
 				0443A44423402E61008E6C8B /* CustomButton.swift in Sources */,
 				04BF0F95233F1BAD00FF5D4F /* BundleExtension.swift in Sources */,
 			);
