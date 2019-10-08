@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class DashboardTableViewCell: UITableViewCell {
 
@@ -22,6 +23,8 @@ class DashboardTableViewCell: UITableViewCell {
     @IBOutlet weak var moreButton: UIButton!
 
     @IBOutlet weak var viewDetailsButton: UIButton!
+
+    var disposeBagCell:DisposeBag = DisposeBag()
 
     var newsInfo: JobModel? {
         didSet {
@@ -58,6 +61,9 @@ class DashboardTableViewCell: UITableViewCell {
         collectionView.isScrollEnabled = false
     }
 
+    override func prepareForReuse() {
+        disposeBagCell = DisposeBag()
+    }
 }
 
 extension DashboardTableViewCell {

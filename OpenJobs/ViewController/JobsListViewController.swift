@@ -47,13 +47,13 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
             segmentioStyle: .onlyLabel
         )
         segmentioView.selectedSegmentioIndex = 0
-        segmentioView.valueDidChange = { segmentio, segmentIndex in
+        segmentioView.valueDidChange = { [weak self] segmentio, segmentIndex in
             DDLogInfo("Selected item: \(segmentIndex)")
             guard let segmentModel = SegmentModel(rawValue: segmentIndex) else {
                 assertionFailure("SegmentModel does not exist")
                 return
             }
-            self.viewModel.updateList(withSegmentModel: segmentModel)
+            self?.viewModel.updateList(withSegmentModel: segmentModel)
         }
     }
 
@@ -89,9 +89,9 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
         let data = self.jobList[indexPath.row]
         cell.newsInfo = self.jobList[indexPath.row]
         cell.descriptionLabel.text = viewModel.businessesStatus(data.connectedBusinesses)
-        cell.moreButton.rx.tap.subscribe(onNext: { _ in
-            self.presentPopMenuView(withSourceView: cell.moreButton)
-        }).disposed(by: disposeBag)
+        cell.moreButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.presentPopMenuView(withSourceView: cell.moreButton)
+        }).disposed(by: cell.disposeBagCell)
         cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
         cell.collectionViewContentOffsett = storedOffsets[indexPath.row] ?? 0
 
