@@ -24,7 +24,7 @@ enum JobType: String {
     case closed = "Closed"
 }
 
-class JobsListViewModel: JobsListDataSource {
+final class JobsListViewModel: JobsListDataSource {
 
     //Output
     var jobsList: Observable<[JobModel]>
@@ -104,22 +104,19 @@ class JobsListViewModel: JobsListDataSource {
             .fetchJobList()
             .asObservable()
             .flatMap { [weak self] list -> Observable<[String: [JobModel]]> in
+
                 self?.jobsOpenAndClosed = list
                 return self?.filterJobList(withJobList: list) ?? Observable.error(RxError.unknown)
 
-            }.flatMap { [weak self] result -> Completable in
-                return self?.updateJobList(withValue: result) ?? Completable.error(RxError.unknown)
-            }.subscribe(onNext: { [weak self] _ in
-                DDLogInfo("onNext")
-                self?.jobsListSubject.onNext(self?.jobsOpen ?? [])
+        }.flatMap { [weak self] result -> Completable in
+            return self?.updateJobList(withValue: result) ?? Completable.error(RxError.unknown)
+        }.subscribe(onError: { error in
+            DDLogError("onError: \(error)")
 
-            }, onError: { error in
-                DDLogError("onError: \(error)")
-
-            }, onCompleted: { [weak self] in
-                DDLogInfo("onCompleted")
-                self?.jobsListSubject.onNext(self?.jobsOpen ?? [])
-            }).disposed(by: disposeBag)
+        }, onCompleted: { [weak self] in
+            DDLogInfo("onCompleted")
+            self?.jobsListSubject.onNext(self?.jobsOpen ?? [])
+        }).disposed(by: disposeBag)
     }
 
     private func saveToLocalDb() -> Completable {

@@ -9,8 +9,9 @@
 
 import UIKit
 
-open class CollectionViewCenteredFlowLayout: UICollectionViewFlowLayout {
-    open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+class CollectionViewCenteredFlowLayout: UICollectionViewFlowLayout {
+
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let layoutAttributesForElements = super.layoutAttributesForElements(in: rect) else {
             return nil
         }

@@ -239,7 +239,7 @@ class JobsListViewModelTests: QuickSpec {
                         })
                         testViewModel.getJobsFromLocalDb()
                     }
-                    it("it completed successfully", closure: {
+                    it("calls to the mockCoreDataManager to fetchJobList", closure: {
                         verify(mockCoreDataManager).fetchJobList()
                     })
                     context("emits empty list to the UI", {
