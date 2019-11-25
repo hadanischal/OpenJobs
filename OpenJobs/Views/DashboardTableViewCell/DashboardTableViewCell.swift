@@ -24,7 +24,7 @@ class DashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var viewDetailsButton: UIButton!
 
-    var disposeBagCell:DisposeBag = DisposeBag()
+    var disposeBagCell: DisposeBag = DisposeBag()
 
     var newsInfo: JobModel? {
         didSet {

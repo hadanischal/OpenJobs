@@ -13,7 +13,7 @@ import Segmentio
 import CocoaLumberjack
 import PopMenu
 
-class JobsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class JobsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentioView: Segmentio!
@@ -34,14 +34,14 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
         return .lightContent
     }
 
-    func setupUI() {
+    private func setupUI() {
         self.navigationController?.configureNavigationBar()
         self.tableView.hideEmptyCells()
         self.view.backgroundColor = .viewBackgroundColor
         self.tableView.backgroundColor = .tableViewBackgroundColor
     }
 
-    func setupSegmentioView() {
+    private func setupSegmentioView() {
         SegmentioBuilder.buildSegmentioView(
             segmentioView: segmentioView,
             segmentioStyle: .onlyLabel
@@ -57,7 +57,7 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-    func setupViewModel() {
+    private func setupViewModel() {
         viewModel.title.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
         viewModel.jobsList
             .observeOn(MainScheduler.instance)
@@ -102,7 +102,7 @@ class JobsListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 
-    func presentPopMenuView(withSourceView sourceView: AnyObject) {
+    private func presentPopMenuView(withSourceView sourceView: AnyObject) {
         let popMenuBuilder = PopMenuBuilder()
         let popMenuViewController = popMenuBuilder.buildPopMenuClose(sourceView)
         popMenuViewController.didDismiss = { selected in
