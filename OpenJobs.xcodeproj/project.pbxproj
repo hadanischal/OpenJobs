@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430BF45238BF27200155DE2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF44238BF27200155DE2 /* swiftgen.yml */; };
+		0430BF48238BF39B00155DE2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF47238BF39B00155DE2 /* Icons.xcassets */; };
+		0430BF4D238BF42000155DE2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF4C238BF42000155DE2 /* Assets.swift */; };
+		0430BF53238BF6EB00155DE2 /* GeneratedFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF52238BF6EB00155DE2 /* GeneratedFonts.swift */; };
+		0430BF56238BF88900155DE2 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF55238BF88900155DE2 /* StoryboardScenes.swift */; };
+		0430BF58238BF89600155DE2 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF57238BF89600155DE2 /* StoryboardSegues.swift */; };
+		0430BF5B238BF9D200155DE2 /* GeneratedCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF5A238BF9D200155DE2 /* GeneratedCoreData.swift */; };
+		0430BF5E238BFB0700155DE2 /* StandardColors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF5D238BFB0700155DE2 /* StandardColors.txt */; };
+		0430BF61238BFB2B00155DE2 /* GeneratedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF60238BFB2B00155DE2 /* GeneratedColors.swift */; };
+		0430BF64238BFD3300155DE2 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF63238BFD3300155DE2 /* GeneratedStrings.swift */; };
+		0430BF67238BFD8A00155DE2 /* DashBoard.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF66238BFD8A00155DE2 /* DashBoard.strings */; };
+		0430BF6A238BFEE700155DE2 /* GeneratedJSONFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF69238BFEE700155DE2 /* GeneratedJSONFiles.swift */; };
+		0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6D238BFFFE00155DE2 /* jobsResult.json */; };
+		0430BF70238C038C00155DE2 /* Mock.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6F238C038C00155DE2 /* Mock.strings */; };
+		0430BF72238C06B200155DE2 /* CustomViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF71238C06B200155DE2 /* CustomViewExtension.swift */; };
 		0443A44323402E61008E6C8B /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43723402E61008E6C8B /* JobsListViewController.swift */; };
 		0443A44423402E61008E6C8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43A23402E61008E6C8B /* CustomButton.swift */; };
 		0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */; };
@@ -87,6 +102,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0430BF44238BF27200155DE2 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		0430BF47238BF39B00155DE2 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		0430BF4C238BF42000155DE2 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "generate-swiftgen.sh"; sourceTree = "<group>"; };
+		0430BF52238BF6EB00155DE2 /* GeneratedFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedFonts.swift; sourceTree = "<group>"; };
+		0430BF55238BF88900155DE2 /* StoryboardScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
+		0430BF57238BF89600155DE2 /* StoryboardSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
+		0430BF5A238BF9D200155DE2 /* GeneratedCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCoreData.swift; sourceTree = "<group>"; };
+		0430BF5D238BFB0700155DE2 /* StandardColors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = StandardColors.txt; sourceTree = "<group>"; };
+		0430BF60238BFB2B00155DE2 /* GeneratedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedColors.swift; sourceTree = "<group>"; };
+		0430BF63238BFD3300155DE2 /* GeneratedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
+		0430BF66238BFD8A00155DE2 /* DashBoard.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DashBoard.strings; sourceTree = "<group>"; };
+		0430BF69238BFEE700155DE2 /* GeneratedJSONFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedJSONFiles.swift; sourceTree = "<group>"; };
+		0430BF6D238BFFFE00155DE2 /* jobsResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jobsResult.json; sourceTree = "<group>"; };
+		0430BF6F238C038C00155DE2 /* Mock.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Mock.strings; sourceTree = "<group>"; };
+		0430BF71238C06B200155DE2 /* CustomViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewExtension.swift; sourceTree = "<group>"; };
 		0443A43723402E61008E6C8B /* JobsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewController.swift; sourceTree = "<group>"; };
 		0443A43A23402E61008E6C8B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +220,120 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0430BF49238BF3E300155DE2 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF4A238BF40300155DE2 /* SwiftGen */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		0430BF4A238BF40300155DE2 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF68238BFEC300155DE2 /* JSONFiles */,
+				0430BF62238BFD2500155DE2 /* Strings */,
+				0430BF5F238BFB1D00155DE2 /* Colors */,
+				0430BF59238BF9B600155DE2 /* CoreData */,
+				0430BF54238BF87700155DE2 /* Storyboards */,
+				0430BF51238BF6DC00155DE2 /* Fonts */,
+				0430BF4B238BF41300155DE2 /* Assets */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		0430BF4B238BF41300155DE2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF4C238BF42000155DE2 /* Assets.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0430BF50238BF50A00155DE2 /* Build scripts */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */,
+				0430BF44238BF27200155DE2 /* swiftgen.yml */,
+				0480BAE4233E0C670070375B /* .swiftlint.yml */,
+			);
+			name = "Build scripts";
+			sourceTree = "<group>";
+		};
+		0430BF51238BF6DC00155DE2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF52238BF6EB00155DE2 /* GeneratedFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0430BF54238BF87700155DE2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF55238BF88900155DE2 /* StoryboardScenes.swift */,
+				0430BF57238BF89600155DE2 /* StoryboardSegues.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0430BF59238BF9B600155DE2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF5A238BF9D200155DE2 /* GeneratedCoreData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0430BF5C238BFAEF00155DE2 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF5D238BFB0700155DE2 /* StandardColors.txt */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		0430BF5F238BFB1D00155DE2 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF60238BFB2B00155DE2 /* GeneratedColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		0430BF62238BFD2500155DE2 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF63238BFD3300155DE2 /* GeneratedStrings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		0430BF65238BFD5600155DE2 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF66238BFD8A00155DE2 /* DashBoard.strings */,
+				0430BF6F238C038C00155DE2 /* Mock.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		0430BF68238BFEC300155DE2 /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF69238BFEE700155DE2 /* GeneratedJSONFiles.swift */,
+			);
+			path = JSONFiles;
+			sourceTree = "<group>";
+		};
+		0430BF6C238BFFE700155DE2 /* JsonFIle */ = {
+			isa = PBXGroup;
+			children = (
+				0430BF6D238BFFFE00155DE2 /* jobsResult.json */,
+			);
+			path = JsonFIle;
+			sourceTree = "<group>";
+		};
 		0443A42E23402C17008E6C8B /* AlertControllerExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +454,11 @@
 		0480BAED233E0D500070375B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0430BF6C238BFFE700155DE2 /* JsonFIle */,
+				0430BF65238BFD5600155DE2 /* Strings */,
+				0430BF5C238BFAEF00155DE2 /* Colors */,
+				04F0659A233CCFC7006F8B77 /* Assets.xcassets */,
+				0430BF47238BF39B00155DE2 /* Icons.xcassets */,
 				0480BAEE233E0D500070375B /* Fonts */,
 			);
 			path = Resources;
@@ -342,6 +492,7 @@
 				0443A42E23402C17008E6C8B /* AlertControllerExtension */,
 				045AD8942342485500614452 /* UICollectionView+Extension */,
 				04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */,
+				0430BF71238C06B200155DE2 /* CustomViewExtension.swift */,
 				04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */,
 				04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */,
 				04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */,
@@ -401,7 +552,7 @@
 		04F06584233CCFC6006F8B77 = {
 			isa = PBXGroup;
 			children = (
-				0480BAE4233E0C670070375B /* .swiftlint.yml */,
+				0430BF50238BF50A00155DE2 /* Build scripts */,
 				04F0658F233CCFC6006F8B77 /* OpenJobs */,
 				04F065A7233CCFC7006F8B77 /* OpenJobsTests */,
 				04F065B2233CCFC7006F8B77 /* OpenJobsUITests */,
@@ -433,10 +584,10 @@
 				0443A43D23402E61008E6C8B /* Utility */,
 				04BF0F7F233F1BAC00FF5D4F /* Extensions */,
 				0480BAED233E0D500070375B /* Resources */,
+				0430BF49238BF3E300155DE2 /* Generated */,
 				0443A44823403734008E6C8B /* CoreDataManager */,
 				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
-				04F0659A233CCFC7006F8B77 /* Assets.xcassets */,
 				04F0659C233CCFC7006F8B77 /* LaunchScreen.storyboard */,
 				04F0659F233CCFC7006F8B77 /* Info.plist */,
 				04F06597233CCFC6006F8B77 /* OpenJobs.xcdatamodeld */,
@@ -504,6 +655,7 @@
 				04F0658B233CCFC6006F8B77 /* Resources */,
 				B8E1142E30FF363344DFB82D /* [CP] Embed Pods Frameworks */,
 				0480BB18233E0D8F0070375B /* Swiftlint Script */,
+				0430BF46238BF2F200155DE2 /* Swiftgen Script */,
 				0480BB45233E1BB90070375B /* Cuckoo Script */,
 			);
 			buildRules = (
@@ -604,13 +756,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0480BB08233E0D500070375B /* source-sans-pro.light.ttf in Resources */,
+				0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */,
+				0430BF5E238BFB0700155DE2 /* StandardColors.txt in Resources */,
 				0480BAE5233E0C670070375B /* .swiftlint.yml in Resources */,
 				045AD89C2342487000614452 /* BusinessCollectionViewCell.xib in Resources */,
 				0480BB09233E0D500070375B /* source-sans-pro.bold.ttf in Resources */,
+				0430BF67238BFD8A00155DE2 /* DashBoard.strings in Resources */,
+				0430BF48238BF39B00155DE2 /* Icons.xcassets in Resources */,
+				0430BF70238C038C00155DE2 /* Mock.strings in Resources */,
 				04F0659E233CCFC7006F8B77 /* LaunchScreen.storyboard in Resources */,
 				04F0659B233CCFC7006F8B77 /* Assets.xcassets in Resources */,
 				04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */,
 				0480BB07233E0D500070375B /* source-sans-pro.regular.ttf in Resources */,
+				0430BF45238BF27200155DE2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +790,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0430BF46238BF2F200155DE2 /* Swiftgen Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftgen Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen\n";
+		};
 		0480BB18233E0D8F0070375B /* Swiftlint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -799,17 +975,23 @@
 				047D7DDE233CE569004B4F17 /* URL+Extensions.swift in Sources */,
 				04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */,
 				04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */,
+				0430BF72238C06B200155DE2 /* CustomViewExtension.swift in Sources */,
 				047D7DC3233CDBEB004B4F17 /* WebService.swift in Sources */,
 				0443A44F23403734008E6C8B /* CoreDataStack.swift in Sources */,
+				0430BF53238BF6EB00155DE2 /* GeneratedFonts.swift in Sources */,
+				0430BF64238BFD3300155DE2 /* GeneratedStrings.swift in Sources */,
 				04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */,
+				0430BF58238BF89600155DE2 /* StoryboardSegues.swift in Sources */,
 				04BF0F92233F1BAD00FF5D4F /* FontExtension.swift in Sources */,
 				04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */,
 				0443A45F2340ECD1008E6C8B /* CoreDataManagerDataSource.swift in Sources */,
 				047D7DC2233CDBEB004B4F17 /* WebServiceProtocol.swift in Sources */,
 				0443A44E23403734008E6C8B /* CoreDataManager.swift in Sources */,
 				04BF0F96233F1BAD00FF5D4F /* ImageViewExtension.swift in Sources */,
+				0430BF56238BF88900155DE2 /* StoryboardScenes.swift in Sources */,
 				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
 				04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */,
+				0430BF4D238BF42000155DE2 /* Assets.swift in Sources */,
 				0480BB38233E0F7D0070375B /* JobsList.swift in Sources */,
 				0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */,
 				04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */,
@@ -822,11 +1004,14 @@
 				0443A45923403903008E6C8B /* ReusableView.swift in Sources */,
 				04BF0F98233F1BAD00FF5D4F /* UITableView+Extensions.swift in Sources */,
 				04BF0FA3233F39C400FF5D4F /* Date+Extensions.swift in Sources */,
+				0430BF61238BFB2B00155DE2 /* GeneratedColors.swift in Sources */,
 				0480BB39233E0F7D0070375B /* JobModel.swift in Sources */,
 				04BF0F97233F1BAD00FF5D4F /* ColourConstant.swift in Sources */,
+				0430BF5B238BF9D200155DE2 /* GeneratedCoreData.swift in Sources */,
 				04DEE2092342169E007ACBFF /* PopMenuBuilder.swift in Sources */,
 				04C9757F233EC9CF005224EB /* GetJobsHandler.swift in Sources */,
 				045AD8962342485500614452 /* UICollectionView+Extension.swift in Sources */,
+				0430BF6A238BFEE700155DE2 /* GeneratedJSONFiles.swift in Sources */,
 				0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */,
 				0448C97223496EF10082369E /* NetworkError.swift in Sources */,
 				0443A44423402E61008E6C8B /* CustomButton.swift in Sources */,

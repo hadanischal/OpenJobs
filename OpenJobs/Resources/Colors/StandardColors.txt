@@ -1,0 +1,20 @@
+charcoal100        : #051315
+charcoal100trans90 : #051315E6
+charcoal90         : #1e2a2c
+charcoal70         : #50595B
+black100trans80    : #000000CC
+neon100            : #01FFFF
+redEnergy100       : #D0021B
+rarthGreen100      : #33FF99
+strikingYellow100  : #FFF572
+
+darkRed          : #D93D5A
+coral  : #F46F60
+whiteSmoke  : #F5F5F5
+grayChateau  : #A3A4A8
+onboardingRed : #d93d5a
+lightSilver         : #d8d8d8
+turquoiseSurf         : #00c5cd
+candyAppleRed         : #f70d1a
+chineseBlack         : #141414
+

@@ -19,7 +19,7 @@ class BusinessCollectionViewCell: UICollectionViewCell {
             guard let data = businessValue else {
                 return
             }
-            statusLabel?.text = data.isHired ?? false ? " Hired " : " Not Hired "
+            statusLabel?.text = data.isHired ?? false ? L10n.DashBoard.statusHired : L10n.DashBoard.statusNotHired
 
             if let urlString = data.thumbnail,
                 let url = URL(string: urlString) {

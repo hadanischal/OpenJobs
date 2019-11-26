@@ -85,5 +85,9 @@ build
 !*.xcworkspace/contents.xcworkspacedata
 
 
-
-
+### Generated ###
+Generated/
+Resources/JsonFIle/
+Resources/Strings/
+Resources/Colors/
+OpenJobsTests/GeneratedMocks.swift
