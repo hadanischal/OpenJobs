@@ -18,6 +18,7 @@ PODS:
   - RxTest (5.0.0):
     - RxSwift (~> 5)
   - Segmentio (4.1)
+  - SwiftGen (6.1.0)
   - SwiftLint (0.34.0)
 
 DEPENDENCIES:
@@ -32,10 +33,11 @@ DEPENDENCIES:
   - RxSwift (~> 5)
   - RxTest (~> 5.0)
   - Segmentio
+  - SwiftGen (~> 6.0)
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CocoaLumberjack
     - Cuckoo
     - Kingfisher
@@ -49,6 +51,8 @@ SPEC REPOS:
     - RxTest
     - Segmentio
     - SwiftLint
+  trunk:
+    - SwiftGen
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
@@ -63,8 +67,9 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
   Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 02d9ad4b6f18ed5603caebb3d69feb07f5a1232b
+PODFILE CHECKSUM: 9366fc32fcf3e80d69a0fae90970ecc4e8be3cd6
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

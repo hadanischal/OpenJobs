@@ -82,7 +82,7 @@ class JobsListViewModelTests: QuickSpec {
                         stub(mockGetJobsHandler, block: { stub in
                             when(stub.getJobs()).thenReturn(Observable.just(mockJobsList))
                         })
-                        testViewModel.getJobsList()
+                        testViewModel.viewDidLoad()
                     }
                     it("it completed successfully", closure: {
                         verify(mockGetJobsHandler).getJobs()
@@ -91,7 +91,7 @@ class JobsListViewModelTests: QuickSpec {
                     context("When server request get succeed", {
                         beforeEach {
                             testScheduler.scheduleAt(300, action: {
-                                testViewModel.getJobsList()
+                                testViewModel.viewDidLoad()
                             })
                         }
 
@@ -112,7 +112,7 @@ class JobsListViewModelTests: QuickSpec {
                         stub(mockGetJobsHandler, block: { stub in
                             when(stub.getJobs()).thenReturn(Observable.just(mockJobsList))
                         })
-                        testViewModel.getJobsList()
+                        testViewModel.viewDidLoad()
                     }
                     it("it completed successfully", closure: {
                         verify(mockGetJobsHandler).getJobs()
@@ -122,7 +122,7 @@ class JobsListViewModelTests: QuickSpec {
                         beforeEach {
                             //make api request
                             testScheduler.scheduleAt(300, action: {
-                                testViewModel.getJobsList()
+                                testViewModel.viewDidLoad()
                             })
 
                             //User Select segment openJobs after API request is complete
@@ -147,7 +147,7 @@ class JobsListViewModelTests: QuickSpec {
                         beforeEach {
                             //make api request
                             testScheduler.scheduleAt(300, action: {
-                                testViewModel.getJobsList()
+                                testViewModel.viewDidLoad()
                             })
 
                             //User Select segment closedJobs after API request is complete
@@ -175,7 +175,7 @@ class JobsListViewModelTests: QuickSpec {
                     stub(mockGetJobsHandler, block: { stub in
                         when(stub.getJobs()).thenReturn(Observable.error(mockError))
                     })
-                    testViewModel.getJobsList()
+                    testViewModel.viewDidLoad()
                 }
                 it("it completed successfully", closure: {
                     verify(mockGetJobsHandler).getJobs()
@@ -183,7 +183,7 @@ class JobsListViewModelTests: QuickSpec {
                 context("doesnt emits jobs list to the UI", {
                     beforeEach {
                         testScheduler.scheduleAt(300, action: {
-                            testViewModel.getJobsList()
+                            testViewModel.viewDidLoad()
                         })
                     }
                     it("doesnt emits jobs list to the UI", closure: {
@@ -206,7 +206,7 @@ class JobsListViewModelTests: QuickSpec {
                             when(stub.saveInCoreDataWith(withJobList: any())).thenReturn(Completable.empty())
                             when(stub.fetchJobList()).thenReturn(Single.just(MockData().jobsOpen))
                         })
-                        testViewModel.getJobsFromLocalDb()
+                        testViewModel.viewDidLoad()
                     }
                     it("it completed successfully", closure: {
                         verify(mockCoreDataManager).fetchJobList()
@@ -215,7 +215,7 @@ class JobsListViewModelTests: QuickSpec {
                     context("emits the jobs list", {
                         beforeEach {
                             testScheduler.scheduleAt(300, action: {
-                                testViewModel.getJobsFromLocalDb()
+                                testViewModel.viewDidLoad()
                             })
                         }
 
@@ -224,8 +224,8 @@ class JobsListViewModelTests: QuickSpec {
                             let res = testScheduler.start {
                                 observable
                             }
-                            expect(res.events.count).to(equal(1))
-                            let correctResult = [Recorded.next(300, MockData().jobsOpen)]
+                            expect(res.events.count).to(equal(2))
+                            let correctResult = [Recorded.next(300, MockData().jobsOpen), Recorded.next(300, MockData().jobsOpen)]
                             expect(res.events).to(equal(correctResult))
                         })
                     })
@@ -237,7 +237,7 @@ class JobsListViewModelTests: QuickSpec {
                             when(stub.saveInCoreDataWith(withJobList: any())).thenReturn(Completable.empty())
                             when(stub.fetchJobList()).thenReturn(Single.error(mockError))
                         })
-                        testViewModel.getJobsFromLocalDb()
+                        testViewModel.viewDidLoad()
                     }
                     it("calls to the mockCoreDataManager to fetchJobList", closure: {
                         verify(mockCoreDataManager).fetchJobList()
@@ -245,7 +245,7 @@ class JobsListViewModelTests: QuickSpec {
                     context("emits empty list to the UI", {
                         beforeEach {
                             testScheduler.scheduleAt(300, action: {
-                                testViewModel.getJobsList()
+                                testViewModel.viewDidLoad()
                             })
                         }
                         it("emits empty list to the UI", closure: {

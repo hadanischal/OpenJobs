@@ -28,7 +28,7 @@ extension UIColor {
         return UIColor(rgb: 0x141414)
     }
     static var coral: UIColor {
-        return UIColor(red: 244, green: 111, blue: 96)
+        return ColorName.coral.color
     }
     static var segmentSelectedTitle: UIColor {
         return UIColor.black
@@ -40,14 +40,13 @@ extension UIColor {
         return UIColor(rgb: 0xEf8136)
     }
     static var segmentSeparator: UIColor {
-        return UIColor(rgb: 0xDDDDDD)
+        return ColorName.lightSilver.color
     }
     static var cellBorderColor: UIColor {
-        return UIColor(rgb: 0xDDDDDD)
+        return ColorName.lightSilver.color
     }
-
     static var statusColor: UIColor {
-        return UIColor(rgb: 0x51B6BB)
+        return ColorName.turquoiseSurf.color
     }
     static var titleColor: UIColor {
         return UIColor.black

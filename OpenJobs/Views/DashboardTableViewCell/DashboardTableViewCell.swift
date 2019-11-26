@@ -33,7 +33,7 @@ class DashboardTableViewCell: UITableViewCell {
             }
             titleLabel.text = data.category
             let postedDate = data.postedDate.yyyyMMddDate?.ddMMyyyyString ?? data.postedDate
-            postedDateLabel.text =  "Posted: \(postedDate)"
+            postedDateLabel.text = L10n.DashBoard.postedDate(postedDate)
             statusLabel.text = data.status.capitalized
             descriptionLabel.text = data.status
         }
@@ -43,9 +43,9 @@ class DashboardTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
         contentView.backgroundColor = .tableViewBackgroundColor
+        contentBagroundView.roundedCorners(radius: 5)
         contentBagroundView.backgroundColor = .white
-        contentBagroundView.borderWidth = 1
-        contentBagroundView.borderColor = .cellBorderColor
+        contentBagroundView.drawShadow(offset: CGSize(width: 0, height: 2), radius: 4.0, opacity: 0.2)
 
         titleLabel.font = .heading2
         postedDateLabel.font = .heading2

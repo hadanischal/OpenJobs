@@ -1,0 +1,60 @@
+#run 'swiftgen' in app project (WORKSPACE/App) and it will update the UIColors.swift file
+#Update colors using StandardColors.txt
+
+xcassets:
+  inputs:
+    - ./OpenJobs/Resources/Assets.xcassets
+    - ./OpenJobs/Resources/Icons.xcassets
+  outputs:
+    - templateName: swift4
+      output: ./OpenJobs/Generated/SwiftGen/Assets/Assets.swift
+
+fonts:
+  inputs:
+    - ./OpenJobs/Resources/Fonts
+  outputs:
+    - templateName: swift4
+      output: ./OpenJobs/Generated/SwiftGen/Fonts/GeneratedFonts.swift
+      
+ib:
+  inputs:
+    - ./OpenJobs/Base.lproj/LaunchScreen.storyboard
+    - ./OpenJobs/Base.lproj/Main.storyboard
+
+  outputs:
+    - templateName: scenes-swift4
+      output: ./OpenJobs/Generated/SwiftGen/Storyboards/StoryboardScenes.swift
+    - templateName: segues-swift4
+      output: ./OpenJobs/Generated/SwiftGen/Storyboards/StoryboardSegues.swift
+      
+      
+coredata:
+  inputs:
+    - ./OpenJobs/OpenJobs.xcdatamodeld
+  outputs:
+    templateName: swift4
+    output: ./OpenJobs/Generated/SwiftGen/CoreData/GeneratedCoreData.swift
+    
+colors:
+  inputs:
+    - ./OpenJobs/Resources/Colors/StandardColors.txt
+  outputs:
+    templateName: swift4
+    output: ./OpenJobs/Generated/SwiftGen/Colors/GeneratedColors.swift
+    
+    
+strings:
+  inputs:
+    - ./OpenJobs/Resources/Strings/DashBoard.strings
+    - ./OpenJobs/Resources/Strings/Mock.strings
+  outputs:
+    - templateName: structured-swift4
+      output: ./OpenJobs/Generated/SwiftGen/Strings/GeneratedStrings.swift
+
+json:
+  inputs:
+    - ./OpenJobs/Resources/JsonFIle/jobsResult.json
+    - ./OpenJobsTests/MockResources/jobs.json
+  outputs:
+    - templateName: runtime-swift4
+      output: ./OpenJobs/Generated/SwiftGen/JSONFiles/GeneratedJSONFiles.swift

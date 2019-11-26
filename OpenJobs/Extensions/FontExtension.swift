@@ -9,14 +9,14 @@
 import UIKit
 
 extension UIFont {
-    class func boldFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "SourceSansPro-Bold", size: size)!
+    static func boldFont(size: CGFloat) -> UIFont {
+        return UIFont(font: FontFamily.SourceSansPro.bold, size: size)
     }
-    class func regularFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "SourceSansPro-Regular", size: size)!
+    static func regularFont(size: CGFloat) -> UIFont {
+        return UIFont(font: FontFamily.SourceSansPro.regular, size: size)
     }
-    class func lightFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "SourceSansPro-Light", size: size)!
+    static func lightFont(size: CGFloat) -> UIFont {
+        return UIFont(font: FontFamily.SourceSansPro.light, size: size)
     }
 }
 

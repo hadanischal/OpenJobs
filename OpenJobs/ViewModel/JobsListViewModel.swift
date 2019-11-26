@@ -11,8 +11,7 @@ import RxSwift
 import CocoaLumberjack
 
 protocol JobsListDataSource {
-    func getJobsList()
-    func getJobsFromLocalDb()
+    func viewDidLoad()
     func updateList(withSegmentModel segmentModel: SegmentModel)
     var jobsList: Observable<[JobModel]> { get }
     var title: Observable<String> { get }
@@ -30,8 +29,8 @@ final class JobsListViewModel: JobsListDataSource {
     var jobsList: Observable<[JobModel]>
 
     //input
-    private let getJobsHandler: GetJobsHandlerProtocol!
-    private let coreDataManager: CoreDataManagerDataSource!
+    private let getJobsHandler: GetJobsHandlerProtocol
+    private let coreDataManager: CoreDataManagerDataSource
 
     private var jobsOpenAndClosed: [JobModel] = []
     private var jobsOpen: [JobModel] = []
@@ -50,27 +49,33 @@ final class JobsListViewModel: JobsListDataSource {
     }
 
     var title: Observable<String> {
-        return Observable.just("Select Job")
+        return Observable.just(L10n.DashBoard.navigationTitle)
     }
 
     func businessesStatus(_ connectedBusiness: [ConnectedBusinessModel]?) -> String {
         if let businessList = connectedBusiness,
             !businessList.isEmpty {
-            return "You have hired \(businessList.count) businesses"
+            return L10n.DashBoard.businessCountDescription(businessList.count)
         }
-        return "connecting you with businesses"
+        return L10n.DashBoard.businessCountNill
     }
 
-    func getJobsList() {
+    func viewDidLoad() {
+        self.getJobsFromLocalDb()
+        self.getJobsList()
+    }
+
+    private func getJobsList() {
         getJobsHandler
             .getJobs()
             .flatMap { [weak self] result -> Observable<[String: [JobModel]]> in
-                if let list = result?.jobs {
-                    self?.jobsOpenAndClosed = list
-                    return self?.filterJobList(withJobList: list) ?? Observable.error(RxError.unknown)
-                }
-                return Observable.error(RxError.unknown)
-            }.flatMap { [weak self] result -> Completable in
+                guard let self = self,
+                    let list = result?.jobs else { return Observable.error(RxError.unknown) }
+
+                self.jobsOpenAndClosed = list
+                return self.filterJobList(withJobList: list)
+
+        }.flatMap { [weak self] result -> Completable in
                 guard let strongSelf = self else {
                     return Completable.error(RxError.unknown)
                 }
@@ -99,7 +104,7 @@ final class JobsListViewModel: JobsListDataSource {
         }
     }
 
-    func getJobsFromLocalDb() {
+    private func getJobsFromLocalDb() {
         self.coreDataManager
             .fetchJobList()
             .asObservable()

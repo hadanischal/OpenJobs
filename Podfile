@@ -13,6 +13,7 @@ target 'OpenJobs' do
   pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
   pod 'NewPopMenu'
+  pod 'SwiftGen', '~> 6.0'
 
 target 'OpenJobsTests' do
   inherit! :search_paths

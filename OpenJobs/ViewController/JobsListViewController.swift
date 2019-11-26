@@ -71,8 +71,7 @@ final class JobsListViewController: UIViewController, UITableViewDelegate, UITab
                     self.showAlertView(withTitle: "error", andMessage: error.localizedDescription)
             })
             .disposed(by: disposeBag)
-        viewModel.getJobsFromLocalDb()
-        viewModel.getJobsList()
+        viewModel.viewDidLoad()
     }
     // MARK: - Table view data source
 

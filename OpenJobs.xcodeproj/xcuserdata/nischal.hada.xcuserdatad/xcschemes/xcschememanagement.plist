@@ -7,7 +7,25 @@
 		<key>OpenJobs.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>18</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>04F0658C233CCFC6006F8B77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04F065A3233CCFC7006F8B77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>04F065AE233CCFC7006F8B77</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
