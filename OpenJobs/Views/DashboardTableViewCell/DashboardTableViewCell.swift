@@ -26,19 +26,6 @@ class DashboardTableViewCell: UITableViewCell {
 
     var disposeBagCell: DisposeBag = DisposeBag()
 
-    var newsInfo: JobModel? {
-        didSet {
-            guard let data = newsInfo else {
-                return
-            }
-            titleLabel.text = data.category
-            let postedDate = data.postedDate.yyyyMMddDate?.ddMMyyyyString ?? data.postedDate
-            postedDateLabel.text = L10n.DashBoard.postedDate(postedDate)
-            statusLabel.text = data.status.capitalized
-            descriptionLabel.text = data.status
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -63,6 +50,15 @@ class DashboardTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         disposeBagCell = DisposeBag()
+    }
+
+    func configure(_ jobInfo: JobModel?) {
+        guard let data = jobInfo else { return }
+        titleLabel.text = data.category
+        let postedDate = data.postedDate.yyyyMMddDate?.ddMMyyyyString ?? data.postedDate
+        postedDateLabel.text = L10n.DashBoard.postedDate(postedDate)
+        statusLabel.text = data.status.capitalized
+        descriptionLabel.text = data.status
     }
 }
 

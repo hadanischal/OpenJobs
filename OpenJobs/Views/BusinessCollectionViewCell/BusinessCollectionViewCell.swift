@@ -14,21 +14,6 @@ class BusinessCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
 
-    var businessValue: ConnectedBusinessModel? {
-        didSet {
-            guard let data = businessValue else {
-                return
-            }
-            statusLabel?.text = data.isHired ?? false ? L10n.DashBoard.statusHired : L10n.DashBoard.statusNotHired
-
-            if let urlString = data.thumbnail,
-                let url = URL(string: urlString) {
-                profileImageView.setImage(url: url)
-            }
-
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.backgroundColor = .tableViewBackgroundColor
@@ -38,5 +23,15 @@ class BusinessCollectionViewCell: UICollectionViewCell {
         statusLabel.backgroundColor = .primary
         statusLabel.font = .statusTitle
         statusLabel.textColor = .titleTintColor
+    }
+
+    func configure(_ businessValue: ConnectedBusinessModel?) {
+        guard let data = businessValue else { return }
+        statusLabel?.text = data.isHired ?? false ? L10n.DashBoard.statusHired : L10n.DashBoard.statusNotHired
+
+        if let urlString = data.thumbnail,
+            let url = URL(string: urlString) {
+            profileImageView.setImage(url: url)
+        }
     }
 }
