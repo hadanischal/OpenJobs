@@ -7,7 +7,7 @@
 */
 "STATUS_HIRED" = " Hired ";
 "STATUS_NOT_HIRED" = " Not Hired ";
-"POSTED_DATE" = "Posted: %@)";
+"POSTED_DATE" = "Posted: %@";
 
 //JobType
 "JOB_TYPE_IN_PROGRESS" = "In Progress";

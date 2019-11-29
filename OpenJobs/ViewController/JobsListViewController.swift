@@ -86,7 +86,7 @@ final class JobsListViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as DashboardTableViewCell
         let data = self.jobList[indexPath.row]
-        cell.newsInfo = self.jobList[indexPath.row]
+        cell.configure(self.jobList[indexPath.row])
         cell.descriptionLabel.text = viewModel.businessesStatus(data.connectedBusinesses)
         cell.moreButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.presentPopMenuView(withSourceView: cell.moreButton)
@@ -124,7 +124,7 @@ extension JobsListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BusinessCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         let data = jobList[collectionView.tag].connectedBusinesses?[indexPath.item]
-        cell.businessValue = data
+        cell.configure(data)
         return cell
     }
 
