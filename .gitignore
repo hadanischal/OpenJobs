@@ -86,8 +86,4 @@ build
 
 
 ### Generated ###
-Generated/
-Resources/JsonFIle/
-Resources/Strings/
-Resources/Colors/
 OpenJobsTests/GeneratedMocks.swift
