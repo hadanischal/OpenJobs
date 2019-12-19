@@ -48,6 +48,7 @@
 		0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */; };
 		0480BB38233E0F7D0070375B /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB24233E0F7C0070375B /* JobsList.swift */; };
 		0480BB39233E0F7D0070375B /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB25233E0F7C0070375B /* JobModel.swift */; };
+		04B394C423AB4CC8000DCC56 /* JobsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */; };
 		04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */; };
 		04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */; };
 		04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */; };
@@ -144,6 +145,7 @@
 		0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusinessModel.swift; sourceTree = "<group>"; };
 		0480BB24233E0F7C0070375B /* JobsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
 		0480BB25233E0F7C0070375B /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListInteractor.swift; sourceTree = "<group>"; };
 		04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 		04C9758E233ECE4C005224EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */,
 				04C9758F233ECE4C005224EB /* JobsListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -990,6 +993,7 @@
 				04BF0F96233F1BAD00FF5D4F /* ImageViewExtension.swift in Sources */,
 				0430BF56238BF88900155DE2 /* StoryboardScenes.swift in Sources */,
 				047D7DC1233CDBEB004B4F17 /* URLRequest+Extensions.swift in Sources */,
+				04B394C423AB4CC8000DCC56 /* JobsListInteractor.swift in Sources */,
 				04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */,
 				0430BF4D238BF42000155DE2 /* Assets.swift in Sources */,
 				0480BB38233E0F7D0070375B /* JobsList.swift in Sources */,
