@@ -8,13 +8,20 @@
 This demo is expected to be run using Swift 5.0 and Xcode 10.3
 
 ## Objective:
-This is a simple Demo project which aims to display Job information using MVVM pattern + RxSwift in Swift.
+This is a simple Demo project which aims to demonstrate some examples of MVVM pattern + RxSwift in Swift using  **clean architecture**, code organisation, loose coupling, **unit testing** and some of the best practices used in modern iOS programming using `Swift`.
+
+App Goal:
 * This project was intended to work as a  Job information demo projects for iOS using Swift. 
-* The demo uses the [Jobs API](https://s3-ap-southeast-2.amazonaws.com/hipgrp-assets/tech-test/jobs.json) since it is well-maintained API which returns information in a JSON format.
+* The demo uses the [Jobs API](https://gist.githubusercontent.com/hadanischal/47ec8878164b7cdf7f66fe45092673fc/raw/9dd9e33e50bee5e2b9f40ba2bda95a67e6c7aa9a/jobs.json) since it is well-maintained API which returns information in a JSON format.
 * The goal is to create a Jobs Feed app which gives a user regularly-updated jobs from the internet related to a particular topic, person, or location.
 * Use of UITableViewController to display Jobs information.
 * Implemented Unit test for business logic
 * Persistent data using core data
+
+## 3rd Party Libraries
+ - **`RxSwift`** - to make `Reactive` binding of API call and response 😇
+ - **`Quick`** - to unit test as much as possible 🤫
+ - **`Nimble`** - to pair with Quick 👬
 
 ## Design patterns:
 ### MVVM:
@@ -42,12 +49,10 @@ Nimble allows us to express expectations using a natural, easily understood lang
 Quick is a behavior-driven development framework for Swift and Objective-C. Inspired by RSpec, Specta, and Ginkgo. Github link for [Quick/Quick](https://github.com/Quick/Quick).
 
 
+ #### App Demo
 
+* The first tab is the **Open Jobs** tab, which contains all **Open Jobs**.
+* The second tab is the **Closed Jobs** tab, which contains all **Closed Jobs**.
 
-## Instructions:
-* The first tab you need to create is the **Open Jobs** tab, which contains all **Open Jobs**.
-![Invited Tab](https://s3-ap-southeast-2.amazonaws.com/hipgrp-assets/tech-test/mob/open-jobs.png "Open Jobs")
+ ![](/ScreenShots/openjob.gif "")
 
-
-* The second tab you need to create is the **Closed Jobs** tab, which contains all **Closed Jobs**.
-![Invited Tab](https://s3-ap-southeast-2.amazonaws.com/hipgrp-assets/tech-test/mob/menu-open.png "Menu Open")
