@@ -22,6 +22,7 @@
 		0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6D238BFFFE00155DE2 /* jobsResult.json */; };
 		0430BF70238C038C00155DE2 /* Mock.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6F238C038C00155DE2 /* Mock.strings */; };
 		0430BF72238C06B200155DE2 /* CustomViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF71238C06B200155DE2 /* CustomViewExtension.swift */; };
+		0435F36723AF7A16000659C9 /* JobsListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F36623AF7A16000659C9 /* JobsListInteractorTest.swift */; };
 		0443A44323402E61008E6C8B /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43723402E61008E6C8B /* JobsListViewController.swift */; };
 		0443A44423402E61008E6C8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43A23402E61008E6C8B /* CustomButton.swift */; };
 		0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */; };
@@ -119,6 +120,7 @@
 		0430BF6D238BFFFE00155DE2 /* jobsResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jobsResult.json; sourceTree = "<group>"; };
 		0430BF6F238C038C00155DE2 /* Mock.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Mock.strings; sourceTree = "<group>"; };
 		0430BF71238C06B200155DE2 /* CustomViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewExtension.swift; sourceTree = "<group>"; };
+		0435F36623AF7A16000659C9 /* JobsListInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListInteractorTest.swift; sourceTree = "<group>"; };
 		0443A43723402E61008E6C8B /* JobsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewController.swift; sourceTree = "<group>"; };
 		0443A43A23402E61008E6C8B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0443A43C23402E61008E6C8B /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				04C97580233EC9E8005224EB /* MockResources */,
 				04C97587233EC9FD005224EB /* GeneratedMocks.swift */,
 				04C97586233EC9FD005224EB /* GetJobsHandlerTests.swift */,
+				0435F36623AF7A16000659C9 /* JobsListInteractorTest.swift */,
 				04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */,
 				04614DED23433D860079392D /* CoreDataManagerTests.swift */,
 				04F065A8233CCFC7006F8B77 /* OpenJobsTests.swift */,
@@ -1034,6 +1037,7 @@
 				04C97583233EC9E8005224EB /* TestError.swift in Sources */,
 				04614DF1234340CF0079392D /* MaterializedSequenceResult.swift in Sources */,
 				04F065A9233CCFC7006F8B77 /* OpenJobsTests.swift in Sources */,
+				0435F36723AF7A16000659C9 /* JobsListInteractorTest.swift in Sources */,
 				04C9758A233EC9FD005224EB /* GeneratedMocks.swift in Sources */,
 				04C9758B233EC9FD005224EB /* MockData.swift in Sources */,
 			);
