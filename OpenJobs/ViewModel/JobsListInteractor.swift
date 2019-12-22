@@ -36,10 +36,10 @@ final class JobsListInteractor: JobsListInteractorProtocol {
             .getJobs()
             .filter { $0 != nil }
             .map { $0!.jobs}
-            .flatMap({ jobsList -> Observable<[JobModel]> in
-                return self.saveToLocalDb(withJobList: jobsList)
+            .flatMap { [weak self] jobsList -> Observable<[JobModel]> in
+                return (self?.saveToLocalDb(withJobList: jobsList) ?? Completable.empty())
                     .andThen(Observable.just(jobsList))
-            })
+            }
     }
 
     // MARK: - get job list from CoreDataManager
