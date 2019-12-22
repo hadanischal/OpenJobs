@@ -29,8 +29,7 @@ final class JobsListViewModel: JobsListDataSource {
     var jobsList: Observable<[JobModel]>
 
     //input
-    private let getJobsHandler: GetJobsHandlerProtocol
-    private let coreDataManager: CoreDataManagerDataSource
+    private let jobsListInteractor: JobsListInteractorProtocol
 
     private var jobsOpenAndClosed: [JobModel] = []
     private var jobsOpen: [JobModel] = []
@@ -39,12 +38,8 @@ final class JobsListViewModel: JobsListDataSource {
     private let jobsListSubject = PublishSubject<[JobModel]>()
     private let disposeBag = DisposeBag()
 
-    init(withSourcesHandler getJobsHandler: GetJobsHandlerProtocol = GetJobsHandler(),
-         withCoreDataManager coreDataManager: CoreDataManagerDataSource = CoreDataManager()
-        ) {
-        self.getJobsHandler = getJobsHandler
-        self.coreDataManager = coreDataManager
-
+    init(withJobsListInteractor jobsListInteractor: JobsListInteractorProtocol = JobsListInteractor()) {
+        self.jobsListInteractor = jobsListInteractor
         self.jobsList = jobsListSubject.asObserver()
     }
 
@@ -61,82 +56,30 @@ final class JobsListViewModel: JobsListDataSource {
     }
 
     func viewDidLoad() {
-        self.getJobsFromLocalDb()
         self.getJobsList()
     }
 
     private func getJobsList() {
-        getJobsHandler
+
+        self.jobsListInteractor
             .getJobs()
-            .flatMap { [weak self] result -> Observable<[String: [JobModel]]> in
-                guard let self = self,
-                    let list = result?.jobs else { return Observable.error(RxError.unknown) }
+            .filter { !$0.isEmpty }
+            .flatMap { [weak self] list -> Observable<()> in
+                guard let self = self else { return Observable.empty()}
 
-                self.jobsOpenAndClosed = list
-                return self.filterJobList(withJobList: list)
-
-        }.flatMap { [weak self] result -> Completable in
-                guard let strongSelf = self else {
-                    return Completable.error(RxError.unknown)
-                }
-                return strongSelf.updateJobList(withValue: result)
-                .andThen(strongSelf.saveToLocalDb())
-            }.subscribe(onNext: { _ in
-                DDLogInfo("onNext")
-
-            }, onError: { error in
-                DDLogError("onError: \(error)")
-
-            }, onCompleted: { [weak self] in
-                DDLogInfo("onCompleted")
-                self?.jobsListSubject.onNext(self?.jobsOpen ?? [])
-
-            }).disposed(by: disposeBag)
-
-    }
-
-    func updateList(withSegmentModel segmentModel: SegmentModel) {
-        switch segmentModel {
-        case .openJobs:
-            jobsListSubject.onNext(jobsOpen)
-        case .closedJobs:
-            jobsListSubject.onNext(jobsClosed)
-        }
-    }
-
-    private func getJobsFromLocalDb() {
-        self.coreDataManager
-            .fetchJobList()
-            .asObservable()
-            .flatMap { [weak self] list -> Observable<[String: [JobModel]]> in
-
-                self?.jobsOpenAndClosed = list
-                return self?.filterJobList(withJobList: list) ?? Observable.error(RxError.unknown)
-
-        }.flatMap { [weak self] result -> Completable in
-            return self?.updateJobList(withValue: result) ?? Completable.error(RxError.unknown)
-        }.subscribe(onError: { error in
-            DDLogError("onError: \(error)")
-
-        }, onCompleted: { [weak self] in
-            DDLogInfo("onCompleted")
-            self?.jobsListSubject.onNext(self?.jobsOpen ?? [])
+                let filterJobList = self.filterJobList(withJobList: list)
+                return self.updateJobList(withValue: filterJobList)
+                    .andThen(Observable.just(()))
+        }.subscribe(onNext: { _ in
+            self.updateList(withSegmentModel: .openJobs)
         }).disposed(by: disposeBag)
     }
 
-    private func saveToLocalDb() -> Completable {
-       return self.coreDataManager.saveInCoreDataWith(withJobList: jobsOpenAndClosed)
-    }
-
-    private func filterJobList(withJobList jobList: [JobModel]) -> Observable<[String: [JobModel]]> {
-        return Observable.create { observer in
-            let dictionary = Dictionary(grouping: jobList, by: { (element: JobModel) in
-                return element.status.lowercased()
-            })
-            observer.on(.next(dictionary))
-            observer.on(.completed)
-            return Disposables.create()
-        }
+    private func filterJobList(withJobList jobList: [JobModel]) -> [String: [JobModel]] {
+        let dictionary = Dictionary(grouping: jobList, by: { (element: JobModel) in
+            return element.status.lowercased()
+        })
+        return dictionary
     }
 
     private func updateJobList(withValue result: [String: [JobModel]]) -> Completable {
@@ -158,4 +101,12 @@ final class JobsListViewModel: JobsListDataSource {
         }
     }
 
+    func updateList(withSegmentModel segmentModel: SegmentModel) {
+        switch segmentModel {
+        case .openJobs:
+            jobsListSubject.onNext(jobsOpen)
+        case .closedJobs:
+            jobsListSubject.onNext(jobsClosed)
+        }
+    }
 }
