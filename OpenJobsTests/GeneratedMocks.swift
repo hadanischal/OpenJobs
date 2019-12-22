@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-10-08 01:03:53 +0000
+// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-12-22 10:13:48 +0000
 
 //
 //  GetJobsHandlerProtocol.swift
@@ -104,7 +104,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-10-08 01:03:53 +0000
+// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-12-22 10:13:48 +0000
 
 //
 //  CoreDataManagerDataSource.swift
@@ -240,7 +240,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-10-08 01:03:53 +0000
+// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-12-22 10:13:48 +0000
 
 //
 //  WebServiceProtocol.swift
@@ -341,6 +341,113 @@ import RxSwift
     
      func load<T: Decodable>(resource: Resource<T>) -> Observable<T>  {
         return DefaultValueRegistry.defaultValue(for: (Observable<T>).self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: OpenJobs/ViewModel/JobsListInteractor.swift at 2019-12-22 10:13:48 +0000
+
+//
+//  JobsListInteractor.swift
+//  OpenJobs
+//
+//  Created by Nischal Hada on 19/12/19.
+//  Copyright © 2019 Nischal Hada. All rights reserved.
+//
+
+import Cuckoo
+@testable import OpenJobs
+
+import Foundation
+import RxSwift
+
+
+ class MockJobsListInteractorProtocol: JobsListInteractorProtocol, Cuckoo.ProtocolMock {
+    
+     typealias MocksType = JobsListInteractorProtocol
+    
+     typealias Stubbing = __StubbingProxy_JobsListInteractorProtocol
+     typealias Verification = __VerificationProxy_JobsListInteractorProtocol
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: false)
+
+    
+    private var __defaultImplStub: JobsListInteractorProtocol?
+
+     func enableDefaultImplementation(_ stub: JobsListInteractorProtocol) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+
+    
+
+    
+    
+    
+     func getJobs() -> Observable<[JobModel]> {
+        
+    return cuckoo_manager.call("getJobs() -> Observable<[JobModel]>",
+            parameters: (),
+            escapingParameters: (),
+            superclassCall:
+                
+                Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                ,
+            defaultCall: __defaultImplStub!.getJobs())
+        
+    }
+    
+
+	 struct __StubbingProxy_JobsListInteractorProtocol: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	     init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func getJobs() -> Cuckoo.ProtocolStubFunction<(), Observable<[JobModel]>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockJobsListInteractorProtocol.self, method: "getJobs() -> Observable<[JobModel]>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	 struct __VerificationProxy_JobsListInteractorProtocol: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func getJobs() -> Cuckoo.__DoNotUse<(), Observable<[JobModel]>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("getJobs() -> Observable<[JobModel]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+}
+
+ class JobsListInteractorProtocolStub: JobsListInteractorProtocol {
+    
+
+    
+
+    
+     func getJobs() -> Observable<[JobModel]>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<[JobModel]>).self)
     }
     
 }

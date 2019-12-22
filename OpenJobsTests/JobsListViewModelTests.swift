@@ -21,26 +21,21 @@ class JobsListViewModelTests: QuickSpec {
 
     override func spec() {
         var testViewModel: JobsListViewModel!
-        var mockGetJobsHandler: MockGetJobsHandlerProtocol!
-        var mockCoreDataManager: MockCoreDataManagerDataSource!
+        var mockJobsListInteractor: MockJobsListInteractorProtocol!
         var testScheduler: TestScheduler!
-        let mockJobsList = MockData().stubJobsList()
+        let mockJobsList = MockData().stubJobsList()!.jobs
 
         describe("JobsListViewModel") {
             beforeEach {
                 testScheduler = TestScheduler(initialClock: 0)
-                mockGetJobsHandler = MockGetJobsHandlerProtocol()
-                stub(mockGetJobsHandler, block: { stub in
+
+                mockJobsListInteractor = MockJobsListInteractorProtocol()
+                stub(mockJobsListInteractor, block: { stub in
                     when(stub.getJobs()).thenReturn(Observable.empty())
                 })
 
-                mockCoreDataManager = MockCoreDataManagerDataSource()
-                stub(mockCoreDataManager, block: { stub in
-                    when(stub.fetchJobList()).thenReturn(Single.just([]))
-                    when(stub.saveInCoreDataWith(withJobList: any())).thenReturn(Completable.empty())
-                })
-                testViewModel = JobsListViewModel(withSourcesHandler: mockGetJobsHandler,
-                                                  withCoreDataManager: mockCoreDataManager)
+                testViewModel = JobsListViewModel(withJobsListInteractor: mockJobsListInteractor)
+
             }
 
             it("sets the titleText correctly", closure: {
@@ -79,13 +74,13 @@ class JobsListViewModelTests: QuickSpec {
 
                 context("when server request succeed for get jobs list", {
                     beforeEach {
-                        stub(mockGetJobsHandler, block: { stub in
+                        stub(mockJobsListInteractor, block: { stub in
                             when(stub.getJobs()).thenReturn(Observable.just(mockJobsList))
                         })
                         testViewModel.viewDidLoad()
                     }
                     it("it completed successfully", closure: {
-                        verify(mockGetJobsHandler).getJobs()
+                        verify(mockJobsListInteractor).getJobs()
                     })
 
                     context("When server request get succeed", {
@@ -109,13 +104,13 @@ class JobsListViewModelTests: QuickSpec {
 
                 describe("When user select segment", {
                     beforeEach {
-                        stub(mockGetJobsHandler, block: { stub in
+                        stub(mockJobsListInteractor, block: { stub in
                             when(stub.getJobs()).thenReturn(Observable.just(mockJobsList))
                         })
                         testViewModel.viewDidLoad()
                     }
                     it("it completed successfully", closure: {
-                        verify(mockGetJobsHandler).getJobs()
+                        verify(mockJobsListInteractor).getJobs()
                     })
 
                     context("When SegmentModel is openJobs", {
@@ -172,13 +167,13 @@ class JobsListViewModelTests: QuickSpec {
 
             context("when server request failed for get jobs", {
                 beforeEach {
-                    stub(mockGetJobsHandler, block: { stub in
+                    stub(mockJobsListInteractor, block: { stub in
                         when(stub.getJobs()).thenReturn(Observable.error(mockError))
                     })
                     testViewModel.viewDidLoad()
                 }
                 it("it completed successfully", closure: {
-                    verify(mockGetJobsHandler).getJobs()
+                    verify(mockJobsListInteractor).getJobs()
                 })
                 context("doesnt emits jobs list to the UI", {
                     beforeEach {
@@ -196,71 +191,6 @@ class JobsListViewModelTests: QuickSpec {
                     })
                 })
 
-            })
-
-            describe("Get Jobs list from local DB", {
-
-                describe("when local DB request succeed for get jobs list", {
-                    beforeEach {
-                        stub(mockCoreDataManager, block: { stub in
-                            when(stub.saveInCoreDataWith(withJobList: any())).thenReturn(Completable.empty())
-                            when(stub.fetchJobList()).thenReturn(Single.just(MockData().jobsOpen))
-                        })
-                        testViewModel.viewDidLoad()
-                    }
-                    it("it completed successfully", closure: {
-                        verify(mockCoreDataManager).fetchJobList()
-                    })
-
-                    context("emits the jobs list", {
-                        beforeEach {
-                            testScheduler.scheduleAt(300, action: {
-                                testViewModel.viewDidLoad()
-                            })
-                        }
-
-                        it("emits the jobs list to the UI", closure: {
-                            let observable = testViewModel.jobsList.asObservable()
-                            let res = testScheduler.start {
-                                observable
-                            }
-                            expect(res.events.count).to(equal(2))
-                            let correctResult = [Recorded.next(300, MockData().jobsOpen), Recorded.next(300, MockData().jobsOpen)]
-                            expect(res.events).to(equal(correctResult))
-                        })
-                    })
-                })
-
-                describe("when local DB request failed for get jobs", {
-                    beforeEach {
-                        stub(mockCoreDataManager, block: { stub in
-                            when(stub.saveInCoreDataWith(withJobList: any())).thenReturn(Completable.empty())
-                            when(stub.fetchJobList()).thenReturn(Single.error(mockError))
-                        })
-                        testViewModel.viewDidLoad()
-                    }
-                    it("calls to the mockCoreDataManager to fetchJobList", closure: {
-                        verify(mockCoreDataManager).fetchJobList()
-                    })
-                    context("emits empty list to the UI", {
-                        beforeEach {
-                            testScheduler.scheduleAt(300, action: {
-                                testViewModel.viewDidLoad()
-                            })
-                        }
-                        it("emits empty list to the UI", closure: {
-                            let observable = testViewModel.jobsList.asObservable()
-                            let res = testScheduler.start {
-                                observable
-                            }
-                            expect(res.events).toNot(beNil())
-                            expect(res.events.count).to(equal(1))
-                            let mockData: [JobModel] = []
-                            let correctResult = [Recorded.next(300, mockData)]
-                            expect(res.events).to(equal(correctResult))
-                        })
-                    })
-                })
             })
         }
     }
