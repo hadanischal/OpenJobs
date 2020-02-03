@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class GetJobsHandler: GetJobsHandlerProtocol {
+final class GetJobsHandler: GetJobsHandlerProtocol {
     var resource: Resource<JobsList> = {
         let url = URL.sourcesUrl()!
         return Resource(url: url)
