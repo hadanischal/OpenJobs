@@ -32,7 +32,9 @@ final class JobsListInteractor: JobsListInteractorProtocol {
     // MARK: - get job list from Server
     private func getJobsListFromServer() -> Observable<[JobModel]> {
         return getJobsHandler
-            .getJobs().catchErrorJustReturn(nil)
+            .getJobs()
+            .retry(2)
+            .catchErrorJustReturn(nil)
             .filter { $0 != nil }
             .map { $0!.jobs}
             .flatMap { [weak self] jobsList -> Observable<[JobModel]> in
