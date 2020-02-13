@@ -3,8 +3,8 @@
 
 xcassets:
   inputs:
-    - ./OpenJobs/Resources/Assets.xcassets
-    - ./OpenJobs/Resources/Icons.xcassets
+    - ./OpenJobs/Resources/Assets/Assets.xcassets
+    - ./OpenJobs/Resources/Assets/Icons.xcassets
   outputs:
     - templateName: swift4
       output: ./OpenJobs/Generated/SwiftGen/Assets/Assets.swift

@@ -14,6 +14,7 @@ target 'OpenJobs' do
   pod 'CocoaLumberjack/Swift'
   pod 'NewPopMenu'
   pod 'SwiftGen', '~> 6.0'
+  pod 'Pecker'
 
 target 'OpenJobsTests' do
   inherit! :search_paths
