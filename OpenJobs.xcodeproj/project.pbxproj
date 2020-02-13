@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0430BF45238BF27200155DE2 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF44238BF27200155DE2 /* swiftgen.yml */; };
-		0430BF48238BF39B00155DE2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF47238BF39B00155DE2 /* Icons.xcassets */; };
 		0430BF4D238BF42000155DE2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF4C238BF42000155DE2 /* Assets.swift */; };
 		0430BF53238BF6EB00155DE2 /* GeneratedFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF52238BF6EB00155DE2 /* GeneratedFonts.swift */; };
 		0430BF56238BF88900155DE2 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF55238BF88900155DE2 /* StoryboardScenes.swift */; };
@@ -49,6 +48,9 @@
 		0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */; };
 		0480BB38233E0F7D0070375B /* JobsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB24233E0F7C0070375B /* JobsList.swift */; };
 		0480BB39233E0F7D0070375B /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480BB25233E0F7C0070375B /* JobModel.swift */; };
+		048E9AB123F3B34D00509B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048E9AAF23F3B34D00509B6A /* Assets.xcassets */; };
+		048E9AB223F3B34D00509B6A /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048E9AB023F3B34D00509B6A /* Icons.xcassets */; };
+		048E9AB923F4000E00509B6A /* .pecker.yml in Resources */ = {isa = PBXBuildFile; fileRef = 048E9AB823F4000E00509B6A /* .pecker.yml */; };
 		04B394C423AB4CC8000DCC56 /* JobsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */; };
 		04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */; };
 		04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */; };
@@ -77,7 +79,6 @@
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
 		04F06599233CCFC6006F8B77 /* OpenJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F06597233CCFC6006F8B77 /* OpenJobs.xcdatamodeld */; };
-		04F0659B233CCFC7006F8B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F0659A233CCFC7006F8B77 /* Assets.xcassets */; };
 		04F0659E233CCFC7006F8B77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F0659C233CCFC7006F8B77 /* LaunchScreen.storyboard */; };
 		04F065A9233CCFC7006F8B77 /* OpenJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F065A8233CCFC7006F8B77 /* OpenJobsTests.swift */; };
 		04F065B4233CCFC7006F8B77 /* OpenJobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F065B3233CCFC7006F8B77 /* OpenJobsUITests.swift */; };
@@ -105,7 +106,6 @@
 
 /* Begin PBXFileReference section */
 		0430BF44238BF27200155DE2 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		0430BF47238BF39B00155DE2 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		0430BF4C238BF42000155DE2 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "generate-swiftgen.sh"; sourceTree = "<group>"; };
 		0430BF52238BF6EB00155DE2 /* GeneratedFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedFonts.swift; sourceTree = "<group>"; };
@@ -147,6 +147,9 @@
 		0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBusinessModel.swift; sourceTree = "<group>"; };
 		0480BB24233E0F7C0070375B /* JobsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsList.swift; sourceTree = "<group>"; };
 		0480BB25233E0F7C0070375B /* JobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		048E9AAF23F3B34D00509B6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		048E9AB023F3B34D00509B6A /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		048E9AB823F4000E00509B6A /* .pecker.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .pecker.yml; sourceTree = "<group>"; };
 		04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListInteractor.swift; sourceTree = "<group>"; };
 		04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
@@ -176,7 +179,6 @@
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F06595233CCFC6006F8B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F06598233CCFC6006F8B77 /* OpenJobs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenJobs.xcdatamodel; sourceTree = "<group>"; };
-		04F0659A233CCFC7006F8B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F0659D233CCFC7006F8B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04F0659F233CCFC7006F8B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04F065A4233CCFC7006F8B77 /* OpenJobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenJobsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 			children = (
 				0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */,
 				0430BF44238BF27200155DE2 /* swiftgen.yml */,
+				048E9AB823F4000E00509B6A /* .pecker.yml */,
 				0480BAE4233E0C670070375B /* .swiftlint.yml */,
 			);
 			name = "Build scripts";
@@ -458,11 +461,10 @@
 		0480BAED233E0D500070375B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				048E9AAE23F3B34D00509B6A /* Assets */,
 				0430BF6C238BFFE700155DE2 /* JsonFIle */,
 				0430BF65238BFD5600155DE2 /* Strings */,
 				0430BF5C238BFAEF00155DE2 /* Colors */,
-				04F0659A233CCFC7006F8B77 /* Assets.xcassets */,
-				0430BF47238BF39B00155DE2 /* Icons.xcassets */,
 				0480BAEE233E0D500070375B /* Fonts */,
 			);
 			path = Resources;
@@ -487,6 +489,15 @@
 				04C975B1233ED46F005224EB /* SegmentModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		048E9AAE23F3B34D00509B6A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				048E9AAF23F3B34D00509B6A /* Assets.xcassets */,
+				048E9AB023F3B34D00509B6A /* Icons.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		04BF0F7F233F1BAC00FF5D4F /* Extensions */ = {
@@ -663,6 +674,7 @@
 				0480BB18233E0D8F0070375B /* Swiftlint Script */,
 				0430BF46238BF2F200155DE2 /* Swiftgen Script */,
 				0480BB45233E1BB90070375B /* Cuckoo Script */,
+				048E9ABA23F401ED00509B6A /* Pecker Script */,
 			);
 			buildRules = (
 			);
@@ -763,15 +775,16 @@
 			files = (
 				0480BB08233E0D500070375B /* source-sans-pro.light.ttf in Resources */,
 				0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */,
+				048E9AB223F3B34D00509B6A /* Icons.xcassets in Resources */,
 				0430BF5E238BFB0700155DE2 /* StandardColors.txt in Resources */,
+				048E9AB923F4000E00509B6A /* .pecker.yml in Resources */,
 				0480BAE5233E0C670070375B /* .swiftlint.yml in Resources */,
 				045AD89C2342487000614452 /* BusinessCollectionViewCell.xib in Resources */,
 				0480BB09233E0D500070375B /* source-sans-pro.bold.ttf in Resources */,
+				048E9AB123F3B34D00509B6A /* Assets.xcassets in Resources */,
 				0430BF67238BFD8A00155DE2 /* DashBoard.strings in Resources */,
-				0430BF48238BF39B00155DE2 /* Icons.xcassets in Resources */,
 				0430BF70238C038C00155DE2 /* Mock.strings in Resources */,
 				04F0659E233CCFC7006F8B77 /* LaunchScreen.storyboard in Resources */,
-				04F0659B233CCFC7006F8B77 /* Assets.xcassets in Resources */,
 				04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */,
 				0480BB07233E0D500070375B /* source-sans-pro.regular.ttf in Resources */,
 				0430BF45238BF27200155DE2 /* swiftgen.yml in Resources */,
@@ -850,6 +863,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Networking/WebServiceProtocol.swift\" \\\n\"${INPUT_DIR}/APIWrappers/GetJobsHandlerProtocol.swift\" \\\n\"${INPUT_DIR}/CoreDataManager/CoreDataManagerDataSource.swift\"\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
+		048E9ABA23F401ED00509B6A /* Pecker Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Pecker Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which pecker >/dev/null; then\n  pecker\nelse\n  echo \"warning: Pecker not installed, download from https://github.com/woshiccm/Pecker\"\nfi\n";
 		};
 		04C9758C233ECC74005224EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

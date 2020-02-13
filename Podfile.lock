@@ -6,6 +6,7 @@ PODS:
   - Kingfisher (5.7.1)
   - NewPopMenu (2.1.2)
   - Nimble (8.0.2)
+  - Pecker (0.1.0)
   - Quick (2.1.0)
   - RxBlocking (5.0.0):
     - RxSwift (~> 5)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - NewPopMenu
   - Nimble (~> 8)
+  - Pecker
   - Quick (~> 2.1.0)
   - RxBlocking (~> 5.0)
   - RxCocoa (~> 5)
@@ -52,6 +54,7 @@ SPEC REPOS:
     - Segmentio
     - SwiftLint
   trunk:
+    - Pecker
     - SwiftGen
 
 SPEC CHECKSUMS:
@@ -60,6 +63,7 @@ SPEC CHECKSUMS:
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Pecker: 4888785f837260be662323a032a513fa9a20a285
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 9366fc32fcf3e80d69a0fae90970ecc4e8be3cd6
+PODFILE CHECKSUM: 6edab0cce8fff0e20aad748a249f2e282c0e9eda
 
 COCOAPODS: 1.8.4
