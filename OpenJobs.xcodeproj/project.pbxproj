@@ -75,6 +75,7 @@
 		04C975A0233ECE4C005224EB /* JobsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9758F233ECE4C005224EB /* JobsListViewModel.swift */; };
 		04C975B0233ECE5C005224EB /* JobsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */; };
 		04C975B2233ED46F005224EB /* SegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C975B1233ED46F005224EB /* SegmentModel.swift */; };
+		04D155F623F8121400D1D0B9 /* JobStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D155F523F8121400D1D0B9 /* JobStatus.swift */; };
 		04DEE2092342169E007ACBFF /* PopMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEE2082342169E007ACBFF /* PopMenuBuilder.swift */; };
 		04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F06590233CCFC6006F8B77 /* AppDelegate.swift */; };
 		04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F06594233CCFC6006F8B77 /* Main.storyboard */; };
@@ -174,6 +175,7 @@
 		04C9758F233ECE4C005224EB /* JobsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModel.swift; sourceTree = "<group>"; };
 		04C975AF233ECE5C005224EB /* JobsListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewModelTests.swift; sourceTree = "<group>"; };
 		04C975B1233ED46F005224EB /* SegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentModel.swift; sourceTree = "<group>"; };
+		04D155F523F8121400D1D0B9 /* JobStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStatus.swift; sourceTree = "<group>"; };
 		04DEE2082342169E007ACBFF /* PopMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMenuBuilder.swift; sourceTree = "<group>"; };
 		04F0658D233CCFC6006F8B77 /* OpenJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F06590233CCFC6006F8B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				0480BB25233E0F7C0070375B /* JobModel.swift */,
 				0480BB23233E0F7C0070375B /* ConnectedBusinessModel.swift */,
 				04C975B1233ED46F005224EB /* SegmentModel.swift */,
+				04D155F523F8121400D1D0B9 /* JobStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 				0430BF6A238BFEE700155DE2 /* GeneratedJSONFiles.swift in Sources */,
 				0443A44623402E61008E6C8B /* SegmentioBuilder.swift in Sources */,
 				0448C97223496EF10082369E /* NetworkError.swift in Sources */,
+				04D155F623F8121400D1D0B9 /* JobStatus.swift in Sources */,
 				0443A44423402E61008E6C8B /* CustomButton.swift in Sources */,
 				04BF0F95233F1BAD00FF5D4F /* BundleExtension.swift in Sources */,
 			);

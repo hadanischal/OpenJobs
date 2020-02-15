@@ -42,9 +42,14 @@ final class JobsListViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     private func setupSegmentioView() {
+        let segmentioContent =  viewModel.segmentTitleList.compactMap { title -> SegmentioItem in
+            return SegmentioItem(title: title, image: nil)
+        }
+
         SegmentioBuilder.buildSegmentioView(
             segmentioView: segmentioView,
-            segmentioStyle: .onlyLabel
+            segmentioStyle: .onlyLabel,
+            segmentioContent: segmentioContent
         )
         segmentioView.selectedSegmentioIndex = 0
         segmentioView.valueDidChange = { [weak self] segmentio, segmentIndex in

@@ -46,6 +46,12 @@ class JobsListViewModelTests: QuickSpec {
                 expect(res.events).to(equal(correctResult))
             })
 
+            it("sets the segmentTitleList correctly", closure: {
+                let correctResult = ["Open Jobs", "Closed Jobs"]
+                expect(testViewModel.segmentTitleList).to(equal(correctResult))
+                expect(testViewModel.segmentTitleList.count).to(equal(2))
+            })
+
             describe("sets businessesStatus correctly", {
                 context("When ConnectedBusiness is greater then zero", {
                     var businessesStatus: String!

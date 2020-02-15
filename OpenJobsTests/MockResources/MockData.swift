@@ -28,11 +28,11 @@ class MockData {
     }
 
     var jobsOpen: [JobModel] {
-        return filterJobList()[JobType.inProgress.rawValue.lowercased()] ?? []
+        return filterJobList()[JobStatus.inProgress.rawValue.lowercased()] ?? []
     }
 
     var jobsClosed: [JobModel] {
-        return filterJobList()[JobType.closed.rawValue.lowercased()] ?? []
+        return filterJobList()[JobStatus.closed.rawValue.lowercased()] ?? []
     }
 
     func readJson(forResource fileName: String ) -> Data? {

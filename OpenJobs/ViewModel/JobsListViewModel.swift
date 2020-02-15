@@ -8,22 +8,27 @@
 
 import Foundation
 import RxSwift
-import CocoaLumberjack
 
 protocol JobsListDataSource {
+    var title: Observable<String> { get }
+    var segmentTitleList: [String] { get }
+    var jobsList: Observable<[JobModel]> { get }
     func viewDidLoad()
     func updateList(withSegmentModel segmentModel: SegmentModel)
-    var jobsList: Observable<[JobModel]> { get }
-    var title: Observable<String> { get }
     func businessesStatus(_ connectedBusiness: [ConnectedBusinessModel]?) -> String
 }
 
-enum JobType: String {
-    case inProgress = "In Progress"
-    case closed = "Closed"
+enum SegmentTitle: String, CaseIterable {
+    case inProgress = "Open Jobs"
+    case closed = "Closed Jobs"
 }
 
 final class JobsListViewModel: JobsListDataSource {
+
+    var title: Observable<String> { return Observable.just(L10n.DashBoard.navigationTitle) }
+
+    //Contain segment title list
+    var segmentTitleList: [String] { return SegmentTitle.allCases.map { $0.rawValue } }
 
     //Output
     var jobsList: Observable<[JobModel]>
@@ -43,10 +48,6 @@ final class JobsListViewModel: JobsListDataSource {
         self.jobsList = jobsListSubject.asObserver()
     }
 
-    var title: Observable<String> {
-        return Observable.just(L10n.DashBoard.navigationTitle)
-    }
-
     func businessesStatus(_ connectedBusiness: [ConnectedBusinessModel]?) -> String {
         if let businessList = connectedBusiness,
             !businessList.isEmpty {
@@ -60,7 +61,6 @@ final class JobsListViewModel: JobsListDataSource {
     }
 
     private func getJobsList() {
-
         self.jobsListInteractor
             .getJobs()
             .filter { !$0.isEmpty }
@@ -85,19 +85,19 @@ final class JobsListViewModel: JobsListDataSource {
     private func updateJobList(withValue result: [String: [JobModel]]) -> Completable {
 
         return Completable.create { completable in
-            let valueInProgress = result[JobType.inProgress.rawValue.lowercased()]
-            let valueClosed = result[JobType.closed.rawValue.lowercased()]
+            let valueInProgress = result[JobStatus.inProgress.rawValue.lowercased()]
+            let valueClosed = result[JobStatus.closed.rawValue.lowercased()]
 
             guard (valueInProgress != nil) || (valueClosed != nil) else {
                 completable(.error(RxError.noElements))
-                return Disposables.create {}
+                return Disposables.create()
             }
 
             self.jobsOpen = valueInProgress ?? []
             self.jobsClosed = valueClosed ?? []
 
             completable(.completed)
-            return Disposables.create {}
+            return Disposables.create()
         }
     }
 
