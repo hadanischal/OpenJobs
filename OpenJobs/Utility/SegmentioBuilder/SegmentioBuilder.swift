@@ -10,20 +10,14 @@ import Segmentio
 import UIKit
 
 struct SegmentioBuilder {
+    static let segmentioPosition: SegmentioPosition = .fixed(maxVisibleItems: 3)
 
-    static func buildSegmentioView(segmentioView: Segmentio, segmentioStyle: SegmentioStyle, segmentioPosition: SegmentioPosition = .fixed(maxVisibleItems: 3)) {
+    static func buildSegmentioView(segmentioView: Segmentio, segmentioStyle: SegmentioStyle, segmentioContent: [SegmentioItem]) {
         segmentioView.setup(
-            content: segmentioContent(),
+            content: segmentioContent,
             style: segmentioStyle,
             options: segmentioOptions(segmentioStyle: segmentioStyle, segmentioPosition: segmentioPosition)
         )
-    }
-
-    private static func segmentioContent() -> [SegmentioItem] {
-        return [
-            SegmentioItem(title: "Open Jobs", image: nil),
-            SegmentioItem(title: "Closed Jobs", image: nil)
-        ]
     }
 
     private static func segmentioOptions(segmentioStyle: SegmentioStyle, segmentioPosition: SegmentioPosition = .fixed(maxVisibleItems: 3)) -> SegmentioOptions {
