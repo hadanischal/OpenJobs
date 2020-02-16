@@ -21,6 +21,7 @@
 		0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6D238BFFFE00155DE2 /* jobsResult.json */; };
 		0430BF70238C038C00155DE2 /* Mock.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0430BF6F238C038C00155DE2 /* Mock.strings */; };
 		0430BF72238C06B200155DE2 /* CustomViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430BF71238C06B200155DE2 /* CustomViewExtension.swift */; };
+		04317D6323F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 04317D6223F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh */; };
 		0435F36723AF7A16000659C9 /* JobsListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F36623AF7A16000659C9 /* JobsListInteractorTest.swift */; };
 		0443A44323402E61008E6C8B /* JobsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43723402E61008E6C8B /* JobsListViewController.swift */; };
 		0443A44423402E61008E6C8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443A43A23402E61008E6C8B /* CustomButton.swift */; };
@@ -121,6 +122,7 @@
 		0430BF6D238BFFFE00155DE2 /* jobsResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jobsResult.json; sourceTree = "<group>"; };
 		0430BF6F238C038C00155DE2 /* Mock.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Mock.strings; sourceTree = "<group>"; };
 		0430BF71238C06B200155DE2 /* CustomViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewExtension.swift; sourceTree = "<group>"; };
+		04317D6223F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Cuckoo-GeneratedMocks.sh"; sourceTree = "<group>"; };
 		0435F36623AF7A16000659C9 /* JobsListInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListInteractorTest.swift; sourceTree = "<group>"; };
 		0443A43723402E61008E6C8B /* JobsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsListViewController.swift; sourceTree = "<group>"; };
 		0443A43A23402E61008E6C8B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		0430BF50238BF50A00155DE2 /* Build scripts */ = {
 			isa = PBXGroup;
 			children = (
+				04317D6223F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh */,
 				0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */,
 				0430BF44238BF27200155DE2 /* swiftgen.yml */,
 				048E9AB823F4000E00509B6A /* .pecker.yml */,
@@ -341,6 +344,14 @@
 				0430BF6D238BFFFE00155DE2 /* jobsResult.json */,
 			);
 			path = JsonFIle;
+			sourceTree = "<group>";
+		};
+		04317D6423F90723008D3297 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		0443A42E23402C17008E6C8B /* AlertControllerExtension */ = {
@@ -594,6 +605,7 @@
 		04F0658F233CCFC6006F8B77 /* OpenJobs */ = {
 			isa = PBXGroup;
 			children = (
+				04317D6423F90723008D3297 /* AppDelegate */,
 				047D7DBD233CDBEB004B4F17 /* Networking */,
 				04C9757B233EC9CF005224EB /* APIWrappers */,
 				0480BB22233E0F7C0070375B /* Models */,
@@ -605,7 +617,6 @@
 				0480BAED233E0D500070375B /* Resources */,
 				0430BF49238BF3E300155DE2 /* Generated */,
 				0443A44823403734008E6C8B /* CoreDataManager */,
-				04F06590233CCFC6006F8B77 /* AppDelegate.swift */,
 				04F06594233CCFC6006F8B77 /* Main.storyboard */,
 				04F0659C233CCFC7006F8B77 /* LaunchScreen.storyboard */,
 				04F0659F233CCFC7006F8B77 /* Info.plist */,
@@ -790,6 +801,7 @@
 				04F0659E233CCFC7006F8B77 /* LaunchScreen.storyboard in Resources */,
 				04F06596233CCFC6006F8B77 /* Main.storyboard in Resources */,
 				0480BB07233E0D500070375B /* source-sans-pro.regular.ttf in Resources */,
+				04317D6323F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh in Resources */,
 				0430BF45238BF27200155DE2 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
