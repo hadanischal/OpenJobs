@@ -11,7 +11,7 @@ import PopMenu
 
 struct PopMenuBuilder {
 
-    fileprivate let cornerRadius: CGFloat = 8
+    private let cornerRadius: CGFloat = 8
 
     func buildPopMenuClose(_ sourceView: AnyObject) -> PopMenuViewController {
         let actions = [
