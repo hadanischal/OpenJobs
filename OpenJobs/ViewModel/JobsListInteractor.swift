@@ -36,7 +36,7 @@ final class JobsListInteractor: JobsListInteractorProtocol {
             .retry(2)
             .catchErrorJustReturn(nil)
             .filter { $0 != nil }
-            .map { $0!.jobs}
+            .compactMap { $0?.jobs}
             .flatMap { [weak self] jobsList -> Observable<[JobModel]> in
                 return (self?.saveToLocalDb(withJobList: jobsList) ?? Completable.empty())
                     .andThen(Observable.just(jobsList))
