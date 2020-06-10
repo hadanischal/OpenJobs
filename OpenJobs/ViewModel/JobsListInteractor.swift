@@ -35,7 +35,6 @@ final class JobsListInteractor: JobsListInteractorProtocol {
             .getJobs()
             .retry(2)
             .catchErrorJustReturn(nil)
-            .filter { $0 != nil }
             .compactMap { $0?.jobs}
             .flatMap { [weak self] jobsList -> Observable<[JobModel]> in
                 return (self?.saveToLocalDb(withJobList: jobsList) ?? Completable.empty())
@@ -46,8 +45,9 @@ final class JobsListInteractor: JobsListInteractorProtocol {
     // MARK: - get job list from CoreDataManager
     private func getJobsFromLocalDb() -> Observable<[JobModel]> {
         self.coreDataManager
-            .fetchJobList().catchErrorJustReturn([])
-            .filter { !$0.isEmpty}
+            .fetchJobList()
+            .catchErrorJustReturn([])
+            .filter { !$0.isEmpty }
             .asObservable()
     }
 

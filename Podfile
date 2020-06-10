@@ -6,9 +6,9 @@ target 'OpenJobs' do
   use_frameworks!
   
   # Pods for OpenJobs
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
-  pod 'Kingfisher', '~> 5.0'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
+  pod 'Kingfisher', '~> 5.13.4'
   pod 'SwiftLint'
   pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
@@ -19,11 +19,11 @@ target 'OpenJobs' do
 target 'OpenJobsTests' do
   inherit! :search_paths
   # Pods for testing
-  pod 'Quick', '~> 2.1.0'
-  pod 'Nimble', '~> 8'
-  pod 'Cuckoo', '~> 1.0.6'
-  pod 'RxBlocking', '~> 5.0'
-  pod 'RxTest',     '~> 5.0'
+  pod 'Quick', '~> 3.0.0'
+  pod 'Nimble', '~> 8.1.1'
+  pod 'Cuckoo', '~> 1.3.2'
+  pod 'RxBlocking', '~> 5.1.1'
+  pod 'RxTest',     '~> 5.1.1'
   
 end
 
