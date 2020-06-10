@@ -85,8 +85,8 @@ final class JobsListViewModel: JobsListDataSource {
     private func updateJobList(withValue result: [String: [JobModel]]) -> Completable {
 
         return Completable.create { completable in
-            let valueInProgress = result[JobStatus.inProgress.rawValue.lowercased()]
-            let valueClosed = result[JobStatus.closed.rawValue.lowercased()]
+            let valueInProgress = result[JobStatus.inProgress.rawValue.lowercased()]?.compactMap { $0 }
+            let valueClosed = result[JobStatus.closed.rawValue.lowercased()]?.compactMap { $0 }
 
             guard (valueInProgress != nil) || (valueClosed != nil) else {
                 completable(.error(RxError.noElements))

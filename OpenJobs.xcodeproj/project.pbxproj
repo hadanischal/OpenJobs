@@ -55,7 +55,6 @@
 		04B394C423AB4CC8000DCC56 /* JobsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */; };
 		04BF0F8F233F1BAD00FF5D4F /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */; };
 		04BF0F90233F1BAD00FF5D4F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */; };
-		04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */; };
 		04BF0F92233F1BAD00FF5D4F /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */; };
 		04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */; };
 		04BF0F94233F1BAD00FF5D4F /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */; };
@@ -156,7 +155,6 @@
 		04B394C323AB4CC8000DCC56 /* JobsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListInteractor.swift; sourceTree = "<group>"; };
 		04BF0F80233F1BAC00FF5D4F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		04BF0F81233F1BAC00FF5D4F /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
-		04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		04BF0F85233F1BAC00FF5D4F /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
@@ -520,7 +518,6 @@
 				04BF0FA1233F39B700FF5D4F /* DateExtensions */,
 				0443A42E23402C17008E6C8B /* AlertControllerExtension */,
 				045AD8942342485500614452 /* UICollectionView+Extension */,
-				04BF0F82233F1BAC00FF5D4F /* UIView+Extension.swift */,
 				0430BF71238C06B200155DE2 /* CustomViewExtension.swift */,
 				04BF0F83233F1BAC00FF5D4F /* FontExtension.swift */,
 				04BF0F84233F1BAC00FF5D4F /* UIViewControllerExtension.swift */,
@@ -1050,7 +1047,6 @@
 				0480BB37233E0F7D0070375B /* ConnectedBusinessModel.swift in Sources */,
 				04BF0F93233F1BAD00FF5D4F /* UIViewControllerExtension.swift in Sources */,
 				045AD8932342483C00614452 /* CollectionViewCenteredFlowLayout.swift in Sources */,
-				04BF0F91233F1BAD00FF5D4F /* UIView+Extension.swift in Sources */,
 				0443A44523402E61008E6C8B /* DashboardTableViewCell.swift in Sources */,
 				04BF0FA5233F39E700FF5D4F /* DateFormatter+Formatters.swift in Sources */,
 				04F06591233CCFC6006F8B77 /* AppDelegate.swift in Sources */,
