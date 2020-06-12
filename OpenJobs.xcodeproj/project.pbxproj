@@ -85,6 +85,7 @@
 		04F065B4233CCFC7006F8B77 /* OpenJobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F065B3233CCFC7006F8B77 /* OpenJobsUITests.swift */; };
 		33BB621E04AB70FC6DAD45B5 /* Pods_OpenJobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211BB2C5E77BDA4E74739116 /* Pods_OpenJobs.framework */; };
 		5C7D8032FBEDD932F3673835 /* Pods_OpenJobsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4720261BAEFF571746DDE2AE /* Pods_OpenJobsTests.framework */; };
+		AFBA704D249378080054B515 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFBA704C249378080054B515 /* bitrise.yml */; };
 		F8818667CB2F4F750BBC72DD /* Pods_OpenJobsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3B2FEA7DF777CDAC522BC7 /* Pods_OpenJobsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +199,7 @@
 		58F30A1FFD7DD7B7C0E4C346 /* Pods-OpenJobsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJobsTests.debug.xcconfig"; path = "Target Support Files/Pods-OpenJobsTests/Pods-OpenJobsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F9C5384370A19BE0DCEA3BC /* Pods-OpenJobsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJobsTests.release.xcconfig"; path = "Target Support Files/Pods-OpenJobsTests/Pods-OpenJobsTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF48FCD59A55BC046A61B09A /* Pods-OpenJobsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJobsUITests.release.xcconfig"; path = "Target Support Files/Pods-OpenJobsUITests/Pods-OpenJobsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AFBA704C249378080054B515 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = bitrise.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		0430BF50238BF50A00155DE2 /* Build scripts */ = {
 			isa = PBXGroup;
 			children = (
+				AFBA704C249378080054B515 /* bitrise.yml */,
 				04317D6223F8F44D008D3297 /* Cuckoo-GeneratedMocks.sh */,
 				0430BF4F238BF4FE00155DE2 /* generate-swiftgen.sh */,
 				0430BF44238BF27200155DE2 /* swiftgen.yml */,
@@ -785,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0480BB08233E0D500070375B /* source-sans-pro.light.ttf in Resources */,
+				AFBA704D249378080054B515 /* bitrise.yml in Resources */,
 				0430BF6E238BFFFE00155DE2 /* jobsResult.json in Resources */,
 				048E9AB223F3B34D00509B6A /* Icons.xcassets in Resources */,
 				0430BF5E238BFB0700155DE2 /* StandardColors.txt in Resources */,
