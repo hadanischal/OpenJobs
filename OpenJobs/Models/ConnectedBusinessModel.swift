@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - ConnectedBusiness
-struct ConnectedBusinessModel: Codable {
+struct ConnectedBusinessModel: Codable, Equatable {
     let businessID: Int64?
     let thumbnail: String?
     let isHired: Bool?
@@ -17,14 +17,6 @@ struct ConnectedBusinessModel: Codable {
     enum CodingKeys: String, CodingKey {
         case businessID = "businessId"
         case thumbnail, isHired
-    }
-}
-
-extension ConnectedBusinessModel: Equatable {
-    static func == (lhs: ConnectedBusinessModel, rhs: ConnectedBusinessModel) -> Bool {
-        return lhs.businessID == rhs.businessID
-            && lhs.thumbnail == rhs.thumbnail
-            && lhs.isHired == rhs.isHired
     }
 }
 

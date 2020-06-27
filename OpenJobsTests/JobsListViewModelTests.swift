@@ -7,18 +7,17 @@
 //
 // swiftlint:disable function_body_length
 
-import XCTest
-import Quick
-import Nimble
 import Cuckoo
-import RxTest
+import Nimble
+import Quick
 import RxBlocking
 import RxSwift
+import RxTest
+import XCTest
 
 @testable import OpenJobs
 
 class JobsListViewModelTests: QuickSpec {
-
     override func spec() {
         var testViewModel: JobsListViewModel!
         var mockJobsListInteractor: MockJobsListInteractorProtocol!
@@ -35,7 +34,6 @@ class JobsListViewModelTests: QuickSpec {
                 })
 
                 testViewModel = JobsListViewModel(withJobsListInteractor: mockJobsListInteractor)
-
             }
 
             it("sets the titleText correctly", closure: {
@@ -56,8 +54,8 @@ class JobsListViewModelTests: QuickSpec {
                 context("When ConnectedBusiness is greater then zero", {
                     var businessesStatus: String!
                     beforeEach {
-                        let connectedBusinesses =  MockData().jobsOpen[0].connectedBusinesses
-                        businessesStatus =  testViewModel.businessesStatus(connectedBusinesses)
+                        let connectedBusinesses = MockData().jobsOpen[0].connectedBusinesses
+                        businessesStatus = testViewModel.businessesStatus(connectedBusinesses)
                     }
                     it("sets the businessesStatus correctly", closure: {
                         expect(businessesStatus).to(equal("You have hired 4 businesses"))
@@ -67,8 +65,8 @@ class JobsListViewModelTests: QuickSpec {
                 context("When ConnectedBusiness is zero", {
                     var businessesStatus: String!
                     beforeEach {
-                        let connectedBusinesses =  MockData().jobsOpen.last?.connectedBusinesses
-                        businessesStatus =  testViewModel.businessesStatus(connectedBusinesses)
+                        let connectedBusinesses = MockData().jobsOpen.last?.connectedBusinesses
+                        businessesStatus = testViewModel.businessesStatus(connectedBusinesses)
                     }
                     it("sets the businessesStatus correctly", closure: {
                         expect(businessesStatus).to(equal("connecting you with businesses"))
@@ -77,7 +75,6 @@ class JobsListViewModelTests: QuickSpec {
             })
 
             describe("Get Jobs from server succeed", {
-
                 context("when server request succeed for get jobs list", {
                     beforeEach {
                         stub(mockJobsListInteractor, block: { stub in
@@ -121,12 +118,12 @@ class JobsListViewModelTests: QuickSpec {
 
                     context("When SegmentModel is openJobs", {
                         beforeEach {
-                            //make api request
+                            // Make api request
                             testScheduler.scheduleAt(300, action: {
                                 testViewModel.viewDidLoad()
                             })
 
-                            //User Select segment openJobs after API request is complete
+                            // User Select segment openJobs after API request is complete
                             testScheduler.scheduleAt(500, action: {
                                 testViewModel.updateList(withSegmentModel: SegmentModel.openJobs)
                             })
@@ -146,12 +143,12 @@ class JobsListViewModelTests: QuickSpec {
 
                     context("When SegmentModel is closedJobs", {
                         beforeEach {
-                            //make api request
+                            // Make api request
                             testScheduler.scheduleAt(300, action: {
                                 testViewModel.viewDidLoad()
                             })
 
-                            //User Select segment closedJobs after API request is complete
+                            // User Select segment closedJobs after API request is complete
                             testScheduler.scheduleAt(500, action: {
                                 testViewModel.updateList(withSegmentModel: SegmentModel.closedJobs)
                             })

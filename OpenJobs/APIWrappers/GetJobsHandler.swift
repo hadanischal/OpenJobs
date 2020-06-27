@@ -21,11 +21,10 @@ final class GetJobsHandler: GetJobsHandlerProtocol {
         self.webService = webService
     }
 
-    func getJobs() -> Observable<JobsList?> {
+    func getJobs() -> Observable<[JobModel]> {
         return self.webService.load(resource: resource)
-            .map { list-> JobsList? in
-                return list
-            }.asObservable()
+            .map { $0.jobs }
+            .asObservable()
             .retry(2)
     }
 }

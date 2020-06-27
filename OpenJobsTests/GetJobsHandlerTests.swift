@@ -6,18 +6,17 @@
 //  Copyright © 2019 Nischal Hada. All rights reserved.
 //
 
-import XCTest
-import Quick
-import Nimble
 import Cuckoo
-import RxTest
+import Nimble
+import Quick
 import RxBlocking
 import RxSwift
+import RxTest
+import XCTest
 
 @testable import OpenJobs
 
 class GetJobsHandlerTests: QuickSpec {
-
     override func spec() {
         var testHandler: GetJobsHandler!
         var mockWebService: MockWebServiceProtocol!
@@ -50,14 +49,13 @@ class GetJobsHandlerTests: QuickSpec {
 
                     let res = testScheduler.start { observable }
                     expect(res.events.count).to(equal(2))
-                    let correctResult = [Recorded.next(200, mockJobsList),
+                    let correctResult = [Recorded.next(200, mockJobsList!.jobs),
                                          Recorded.completed(200)]
                     expect(res.events).to(equal(correctResult))
                 })
             })
 
             context("when get Jobs List server request failed ", {
-
                 beforeEach {
                     stub(mockWebService, block: { stub in
                         when(stub.load(resource: any(Resource<JobsList>.self))).thenReturn(Observable.error(mockError))
@@ -72,7 +70,7 @@ class GetJobsHandlerTests: QuickSpec {
 
                     let res = testScheduler.start { observable }
                     expect(res.events.count).to(equal(1))
-                    let correctResult: [Recorded<Event<JobsList?>>] = [Recorded.error(200, mockError, JobsList?.self) ]
+                    let correctResult: [Recorded<Event<[JobModel]>>] = [Recorded.error(200, mockError, [JobModel].self)]
                     expect(res.events).to(equal(correctResult))
                 })
             })

@@ -12,9 +12,3 @@ import Foundation
 struct JobsList: Codable {
     let jobs: [JobModel]
 }
-
-extension JobsList: Equatable {
-    static func == (lhs: JobsList, rhs: JobsList) -> Bool {
-        return lhs.jobs == rhs.jobs
-    }
-}

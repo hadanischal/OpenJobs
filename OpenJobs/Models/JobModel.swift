@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 // MARK: - Job
-struct JobModel: Codable {
+struct JobModel: Codable, Equatable {
     let jobID: Int64
     let category, postedDate, status: String
     let connectedBusinesses: [ConnectedBusinessModel]?
@@ -19,17 +19,6 @@ struct JobModel: Codable {
     enum CodingKeys: String, CodingKey {
         case jobID = "jobId"
         case category, postedDate, status, connectedBusinesses, detailsLink
-    }
-}
-
-extension JobModel: Equatable {
-    static func == (lhs: JobModel, rhs: JobModel) -> Bool {
-        return lhs.jobID == rhs.jobID
-        && lhs.status == rhs.status
-        && lhs.category == rhs.category
-        && lhs.postedDate == rhs.postedDate
-        && lhs.detailsLink == rhs.detailsLink
-        && lhs.connectedBusinesses == rhs.connectedBusinesses
     }
 }
 

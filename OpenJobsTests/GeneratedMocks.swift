@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2019-12-22 10:13:48 +0000
+// MARK: - Mocks generated from file: OpenJobs/APIWrappers/GetJobsHandlerProtocol.swift at 2020-06-27 03:56:19 +0000
 
 //
 //  GetJobsHandlerProtocol.swift
@@ -39,9 +39,9 @@ import RxSwift
     
     
     
-     func getJobs() -> Observable<JobsList?> {
+     func getJobs() -> Observable<[JobModel]> {
         
-    return cuckoo_manager.call("getJobs() -> Observable<JobsList?>",
+    return cuckoo_manager.call("getJobs() -> Observable<[JobModel]>",
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -61,9 +61,9 @@ import RxSwift
 	    }
 	    
 	    
-	    func getJobs() -> Cuckoo.ProtocolStubFunction<(), Observable<JobsList?>> {
+	    func getJobs() -> Cuckoo.ProtocolStubFunction<(), Observable<[JobModel]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockGetJobsHandlerProtocol.self, method: "getJobs() -> Observable<JobsList?>", parameterMatchers: matchers))
+	        return .init(stub: cuckoo_manager.createStub(for: MockGetJobsHandlerProtocol.self, method: "getJobs() -> Observable<[JobModel]>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -83,9 +83,9 @@ import RxSwift
 	
 	    
 	    @discardableResult
-	    func getJobs() -> Cuckoo.__DoNotUse<(), Observable<JobsList?>> {
+	    func getJobs() -> Cuckoo.__DoNotUse<(), Observable<[JobModel]>> {
 	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("getJobs() -> Observable<JobsList?>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	        return cuckoo_manager.verify("getJobs() -> Observable<[JobModel]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -97,14 +97,14 @@ import RxSwift
     
 
     
-     func getJobs() -> Observable<JobsList?>  {
-        return DefaultValueRegistry.defaultValue(for: (Observable<JobsList?>).self)
+     func getJobs() -> Observable<[JobModel]>  {
+        return DefaultValueRegistry.defaultValue(for: (Observable<[JobModel]>).self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2019-12-22 10:13:48 +0000
+// MARK: - Mocks generated from file: OpenJobs/CoreDataManager/CoreDataManagerDataSource.swift at 2020-06-27 03:56:19 +0000
 
 //
 //  CoreDataManagerDataSource.swift
@@ -240,7 +240,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2019-12-22 10:13:48 +0000
+// MARK: - Mocks generated from file: OpenJobs/Networking/WebServiceProtocol.swift at 2020-06-27 03:56:19 +0000
 
 //
 //  WebServiceProtocol.swift
@@ -346,7 +346,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: OpenJobs/ViewModel/JobsListInteractor.swift at 2019-12-22 10:13:48 +0000
+// MARK: - Mocks generated from file: OpenJobs/ViewModel/JobsListInteractor.swift at 2020-06-27 03:56:19 +0000
 
 //
 //  JobsListInteractor.swift

@@ -6,18 +6,17 @@
 //  Copyright © 2019 Nischal Hada. All rights reserved.
 //
 
-import XCTest
-import Quick
-import Nimble
 import Cuckoo
-import RxTest
+import Nimble
+import Quick
 import RxBlocking
 import RxSwift
+import RxTest
+import XCTest
 
 @testable import OpenJobs
 
 class JobsListInteractorTest: QuickSpec {
-
     override func spec() {
         var testViewModel: JobsListInteractor!
         var mockGetJobsHandler: MockGetJobsHandlerProtocol!
@@ -43,11 +42,10 @@ class JobsListInteractorTest: QuickSpec {
             }
 
             describe("Get Jobs from server succeed", {
-
                 context("when server request succeed for get jobs list", {
                     beforeEach {
                         stub(mockGetJobsHandler, block: { stub in
-                            when(stub.getJobs()).thenReturn(Observable.just(mockJobsList))
+                            when(stub.getJobs()).thenReturn(Observable.just(mockJobsList!.jobs))
                         })
                     }
                     it("calls to the mockGetJobsHandler to fetchJobList", closure: {
@@ -98,7 +96,6 @@ class JobsListInteractorTest: QuickSpec {
             })
 
             describe("Get Jobs list from local DB", {
-
                 describe("when local DB request succeed for get jobs list", {
                     beforeEach {
                         stub(mockCoreDataManager, block: { stub in

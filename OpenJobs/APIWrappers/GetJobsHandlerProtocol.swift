@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol GetJobsHandlerProtocol {
-    func getJobs() -> Observable<JobsList?>
+    func getJobs() -> Observable<[JobModel]>
 }

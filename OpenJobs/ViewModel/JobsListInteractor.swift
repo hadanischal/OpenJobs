@@ -14,7 +14,6 @@ protocol JobsListInteractorProtocol {
 }
 
 final class JobsListInteractor: JobsListInteractorProtocol {
-
     private let getJobsHandler: GetJobsHandlerProtocol
     private let coreDataManager: CoreDataManagerDataSource
 
@@ -30,19 +29,20 @@ final class JobsListInteractor: JobsListInteractorProtocol {
     }
 
     // MARK: - get job list from Server
+
     private func getJobsListFromServer() -> Observable<[JobModel]> {
         return getJobsHandler
             .getJobs()
-            .retry(2)
-            .catchErrorJustReturn(nil)
-            .compactMap { $0?.jobs}
+            .catchErrorJustReturn([])
+            .filter { !$0.isEmpty }
             .flatMap { [weak self] jobsList -> Observable<[JobModel]> in
-                return (self?.saveToLocalDb(withJobList: jobsList) ?? Completable.empty())
+                (self?.saveToLocalDb(withJobList: jobsList) ?? Completable.empty())
                     .andThen(Observable.just(jobsList))
             }
     }
 
     // MARK: - get job list from CoreDataManager
+
     private func getJobsFromLocalDb() -> Observable<[JobModel]> {
         self.coreDataManager
             .fetchJobList()
@@ -52,8 +52,9 @@ final class JobsListInteractor: JobsListInteractorProtocol {
     }
 
     // MARK: - Save job list to CoreDataManager
+
     private func saveToLocalDb(withJobList jobList: [JobModel]) -> Completable {
         return self.coreDataManager.saveInCoreDataWith(withJobList: jobList)
-            .catchError { _ in Completable.empty()}
+            .catchError { _ in Completable.empty() }
     }
 }
