@@ -28,7 +28,6 @@ final class CoreDataManagerHandler: CoreDataManagerHandling {
         CoreDataStack.sharedInstance
     }()
 
-
     func saveInCoreDataWith(withJobList jobList: [JobModel]) -> Completable {
         return clearData()
         .andThen(saveCoreData(jobList))
