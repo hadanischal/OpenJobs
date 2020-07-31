@@ -14,7 +14,7 @@ target 'OpenJobs' do
   pod 'CocoaLumberjack/Swift'
   pod 'NewPopMenu'
   pod 'SwiftGen', '~> 6.0'
-  pod 'Pecker'
+  pod 'Pecker', '~> 0.4.0'
   pod 'PKHUD', '~> 5.0'
 
 target 'OpenJobsTests' do
