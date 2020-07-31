@@ -12,3 +12,14 @@ enum SegmentModel: Int {
     case openJobs
     case closedJobs
 }
+
+extension SegmentModel {
+    var jobStatusValue: String {
+        switch self {
+        case .openJobs:
+            return JobStatus.inProgress.rawValue
+        case .closedJobs:
+            return JobStatus.closed.rawValue
+        }
+    }
+}
