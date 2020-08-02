@@ -1,0 +1,7 @@
+primary              : #FD0585
+tableViewBGColor     : #EEEEEE
+viewBGColor          : #EEF0F1
+
+coral                : #F46F60
+lightSilver          : #d8d8d8
+shadowColor          : #000000

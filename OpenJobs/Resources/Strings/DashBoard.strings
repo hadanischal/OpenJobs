@@ -1,0 +1,19 @@
+/* 
+  DashBoard.strings
+  OpenJobs
+
+  Created by Nischal Hada on 25/11/19.
+  Copyright © 2019 Nischal Hada. All rights reserved.
+*/
+"STATUS_HIRED" = " Hired ";
+"STATUS_NOT_HIRED" = " Not Hired ";
+"POSTED_DATE" = "Posted: %@";
+
+//JobType
+"JOB_TYPE_IN_PROGRESS" = "In Progress";
+"JOB_TYPE_CLOSED" = "Closed";
+
+"BUSINESS_COUNT_DESCRIPTION" = "You have hired %d businesses";
+"BUSINESS_COUNT_NILL" = "connecting you with businesses";
+
+"NAVIGATION_TITLE" = "Select Job";
