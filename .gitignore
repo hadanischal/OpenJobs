@@ -80,12 +80,10 @@ Sign up for free
 
 ### Xcode ###
 build
-*.xcodeproj/*
+# *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
 
 
 ### Generated ###
 *GeneratedMocks.swift
-*swiftformat
-
